@@ -1,38 +1,38 @@
 <h1 align="center">
-  <img src="./assets/logo-wb.svg" alt="icon" width="200"></img>
+  <img src="./assets/facebook-logo.png" alt="icon" width="200"></img>
   <br>
-  <b>Wanbook Social</b>
+  <b>Mini Facebook</b>
 </h1>
 
-<p align="center">A Social Network, with the idea from <b>Facebook</b>.</p>
+<p align="center">A Mini Social Network, with the idea from <b>Facebook</b>.</p>
 
 <!-- Badges -->
 <p align="center">
-  <a href="https://github.com/QuanBlue/wanbook-social/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/QuanBlue/wanbook-social" alt="contributors" />
+  <a href="https://github.com/QuanBlue/mini-facebook/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/QuanBlue/mini-facebook" alt="contributors" />
   </a>
   <a href="">
-    <img src="https://img.shields.io/github/last-commit/QuanBlue/wanbook-social" alt="last update" />
+    <img src="https://img.shields.io/github/last-commit/QuanBlue/mini-facebook" alt="last update" />
   </a>
-  <a href="https://github.com/QuanBlue/wanbook-social/network/members">
-    <img src="https://img.shields.io/github/forks/QuanBlue/wanbook-social" alt="forks" />
+  <a href="https://github.com/QuanBlue/mini-facebook/network/members">
+    <img src="https://img.shields.io/github/forks/QuanBlue/mini-facebook" alt="forks" />
   </a>
-  <a href="https://github.com/QuanBlue/wanbook-social/stargazers">
-    <img src="https://img.shields.io/github/stars/QuanBlue/wanbook-social" alt="stars" />
+  <a href="https://github.com/QuanBlue/mini-facebook/stargazers">
+    <img src="https://img.shields.io/github/stars/QuanBlue/mini-facebook" alt="stars" />
   </a>
-  <a href="https://github.com/QuanBlue/wanbook-social/issues/">
-    <img src="https://img.shields.io/github/issues/QuanBlue/wanbook-social" alt="open issues" />
+  <a href="https://github.com/QuanBlue/mini-facebook/issues/">
+    <img src="https://img.shields.io/github/issues/QuanBlue/mini-facebook" alt="open issues" />
   </a>
-  <a href="https://github.com/QuanBlue/wanbook-social/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/QuanBlue/wanbook-social.svg" alt="license" />
+  <a href="https://github.com/QuanBlue/mini-facebook/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/QuanBlue/mini-facebook.svg" alt="license" />
   </a>
 </p>
 
 <p align="center">
   <b>
-      <a href="https://github.com/QuanBlue/wanbook-social">Documentation</a> •
-      <a href="https://github.com/QuanBlue/wanbook-social/issues/">Report Bug</a> •
-      <a href="https://github.com/QuanBlue/wanbook-social/issues/">Request Feature</a>
+      <a href="https://github.com/QuanBlue/mini-facebook">Documentation</a> •
+      <a href="https://github.com/QuanBlue/mini-facebook/issues/">Report Bug</a> •
+      <a href="https://github.com/QuanBlue/mini-facebook/issues/">Request Feature</a>
   </b>
 </p>
 
@@ -44,6 +44,7 @@
 - [Key Features](#key-features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
+  - [Project Structure](#project-structure)
   - [Prerequisites](#prerequisites)
   - [Environment Variables](#environment-variables)
   - [Installation](#installation)
@@ -81,6 +82,40 @@
 
 # Getting Started
 
+## Project Structure
+
+```txt
+$ tree src
+src
+├── common
+│   ├── components
+│   │   └── marketing
+│   │       ├── Card
+│   │       │   ├── Card.module.css
+│   │       │   ├── Card.tsx
+│   │       │   └── index.ts
+│   │       ├── Footer
+│   │       │   ├── Footer.module.css
+│   │       │   ├── Footer.tsx
+│   │       │   └── index.ts
+│   │       └── SimpleGrid
+│   │           ├── SimpleGrid.module.css
+│   │           ├── SimpleGrid.tsx
+│   │           └── index.ts
+│   └── styles
+│       └── globals.css
+├── modules
+│   └── home
+│       ├── Home.module.css
+│       ├── Home.tsx
+│       └── index.ts
+└── pages
+    ├── _app.tsx
+    ├── api
+    │   └── hello.ts
+    └── index.tsx
+```
+
 ## Prerequisites
 
 - **Python:** `>= 3.10.7`. Install [here](https://www.python.org/downloads/).
@@ -108,7 +143,7 @@ You can also check out the file `.env.example` to see all required environment v
 
 ```bash
 # Clone this repository
-git clone https://github.com/QuanBlue/wanbook-social
+git clone https://github.com/QuanBlue/mini-facebook
 ```
 
 > **Note**
@@ -116,7 +151,6 @@ git clone https://github.com/QuanBlue/wanbook-social
 
 # Roadmap
 
-- [ ] Design
 - [ ] Sign In/ Up
   - [ ] User account (username, password)
   - [ ] Gmail
@@ -136,8 +170,8 @@ git clone https://github.com/QuanBlue/wanbook-social
 
 # Contributors
 
-<a href="https://github.com/QuanBlue/wanbook-social/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=QuanBlue/wanbook-social" />
+<a href="https://github.com/QuanBlue/mini-facebook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=QuanBlue/mini-facebook" />
 </a>
 
 Contributions are always welcome!
@@ -146,6 +180,8 @@ Contributions are always welcome!
 
 This software uses the following open source packages:
 
+- Next.js enterprise projects structure [here](https://blog.dennisokeeffe.com/blog/2021-12-06-nextjs-enterprise-project-structure)
+- Next.js [Project Structure](https://nextjs.org/docs/getting-started/project-structure)
 - Emojis are taken from [here](https://github.com/arvida/emoji-cheat-sheet.com)
 
 # License
