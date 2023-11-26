@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./assets/icon.jpg" alt="icon" width="200"></img>
+  <img src="./assets/logo-wb.svg" alt="icon" width="200"></img>
   <br>
   <b>Wanbook Social</b>
 </h1>
@@ -64,9 +64,8 @@
 
 # Tech Stack
 
-- **Design:** Figma
 - **Frontend:**
-  - <u>UI framework</u>: ReactJS
+  - <u>UI framework</u>: NextJS
   - <u>CSS framework</u>: Tailwind CSS
   - <u>Language</u>: TypeScript
 - **Backend:**
@@ -85,7 +84,7 @@
 ## Prerequisites
 
 - **Python:** `>= 3.10.7`. Install [here](https://www.python.org/downloads/).
-- ...
+- **Nodejs:** >= 18.17.0
 
 ## Environment Variables
 
