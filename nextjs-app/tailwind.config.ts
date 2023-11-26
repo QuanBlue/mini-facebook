@@ -8,13 +8,8 @@ const config: Config = {
 	],
 	theme: {
 		colors: {
-			blue: "#1fb6ff",
-			purple: "#7e5bef",
-			pink: "#ff49db",
-			orange: "#ff7849",
-			green: "#13ce66",
-			yellow: "#ffc82c",
-
+			blue: "#0866FF",
+			"dark-gray": "#E4E6EB",
 			gray: "#F0F2F5",
 		},
 		fontSize: {
