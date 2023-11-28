@@ -1,10 +1,9 @@
-import Header from "@components/Header";
+import HomePage from "@modules/Homepage";
 
 const IndexPage = () => (
-	<div>
-		<Header />
-		<h1 className="text-yellow">Hello Next.js 👋 dad</h1>
-	</div>
+   <div>
+      <HomePage />
+   </div>
 );
 
 export default IndexPage;

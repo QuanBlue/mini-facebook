@@ -2,10 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+:root {
+   --primary-color: #1c77e9;
+   --secondary-color: #f0f2f5;
+
+   --active-button-color: #ebf5ff;
+   --inactive-button-color: #e4e6eb;
+   --hover-button-color: #d8dadf;
+
+   --active-icon-color: #0866ff;
+   --inactive-icon-color: black;
+
+   --text-gray: #696b6f;
+   --text-dark-gray: rgb(99, 96, 96);
+}
+
 body {
-	padding: 0px;
-	margin: 0px;
-	color: brown;
-	background-color: #f0f2f5;
+   background-color: var(--secondary-color);
+}
+
+* {
+   padding: 0px;
+   margin: 0px;
+   font-size: 14px;
+   color: black;
+}
+
+button {
+   border: none;
+   background-color: transparent;
+   padding: 8px;
+}
+
+button:hover {
+   cursor: pointer;
+   background-color: #e4e6e9;
+}
+
+.circle-btn {
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--inactive-button-color);
+}
+
+.circle-btn:hover {
+   background-color: var(--hover-button-color);
+}
+
+.text-btn {
+   color: var(--text-dark-gray);
+   font-weight: bold;
+   padding: 0;
+}
+
+.text-btn:hover {
+   background-color: transparent;
+   text-decoration: underline;
 }
