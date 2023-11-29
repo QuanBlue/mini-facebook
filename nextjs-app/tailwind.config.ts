@@ -11,39 +11,44 @@ const config: Config = {
 
    important: true,
    theme: {
-      colors: {
-         primary: "var(--primary-color)",
-         secondary: "var(--secondary-color)",
+      extend: {
+         colors: {
+            primary: "var(--primary-color)",
+            secondary: "var(--secondary-color)",
 
-         "primary-btn": "var(--active-button-color)",
-         "secondary-btn": "var(--inactive-button-color)",
-         "hover-btn": "var(--hover-button-color)",
+            "primary-btn": "var(--active-button-color)",
+            "secondary-btn": "var(--inactive-button-color)",
+            "hover-btn": "var(--hover-button-color)",
 
-         "primary-icon": "var(--active-icon-color)",
-         "secondary-icon": "var(--inactive-icon-color)",
+            "primary-icon": "var(--active-icon-color)",
+            "secondary-icon": "var(--inactive-icon-color)",
 
-         "gray-txt": "var(--text-gray)",
-         "dark-gray-txt": "var(--text-dark-gray)",
+            "light-gray-txt": "var(--text-light-gray)",
+            "gray-txt": "var(--text-gray)",
+            "dark-gray-txt": "var(--text-dark-gray)",
 
-         "active-status": "#31A24C",
+            "active-status": "#31A24C",
 
-         gray: "#f2f2f2",
-         white: "#FFFFFF",
-         red: "#FF0000",
-         black: "#000000",
-         transparent: "transparent",
+            gray: "#f2f2f2",
+            white: "#FFFFFF",
+            red: "#FF0000",
+            black: "#000000",
+            transparent: "transparent",
+         },
+         fontSize: {
+            sm: ["14px", "20px"],
+            base: ["16px", "24px"],
+            lg: ["20px", "28px"],
+            xl: ["24px", "32px"],
+         },
+         fontFamily: {
+            sans: ["Graphik", "sans-serif"],
+            serif: ["Merriweather", "serif"],
+         },
+         boxShadow: {
+            modal: "0px 5px 15px rgba(0, 0, 0, 0.35) ",
+         },
       },
-      fontSize: {
-         sm: ["14px", "20px"],
-         base: ["16px", "24px"],
-         lg: ["20px", "28px"],
-         xl: ["24px", "32px"],
-      },
-      fontFamily: {
-         sans: ["Graphik", "sans-serif"],
-         serif: ["Merriweather", "serif"],
-      },
-      extend: {},
    },
    plugins: [],
    corePlugins: {

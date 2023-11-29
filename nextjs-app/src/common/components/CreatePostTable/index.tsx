@@ -2,10 +2,14 @@ import React from "react";
 import Image from "next/image";
 import avatar from "@public/avt.jpg";
 import pictureIcon from "@public/picture.png";
+import Modal from "./Modal";
 
 function CreatePostTable() {
    return (
       <div className="mt-5 h-28 rounded-lg bg-white px-4 py-3 shadow-md">
+         {/* modal */}
+         {/* <Modal /> */}
+
          {/* input field */}
          <div className="flex items-center gap-3">
             <button className="relative h-[40px] w-[40px] overflow-hidden rounded-full">

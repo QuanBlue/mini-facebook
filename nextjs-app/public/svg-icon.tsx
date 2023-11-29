@@ -25,6 +25,84 @@ export function HomepageIcon({
    );
 }
 
+// Down Arrow Icon
+export function DownArrowIcon({
+   height = 12,
+   width = 12,
+   fill = "var(--inactive-icon-color)",
+}: Props) {
+   return (
+      <svg
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 32 32"
+         width={width}
+         height={height}
+         fill={fill}
+      >
+         <g
+            transform="translate(0.000000,32.000000) scale(0.100000,-0.100000)"
+            fill="#000000"
+            stroke="none"
+         >
+            <path
+               d="M20 227 c0 -7 31 -44 70 -82 l70 -69 70 69 c39 38 70 75 70 82 0 10
+-33 13 -140 13 -107 0 -140 -3 -140 -13z"
+            />
+         </g>
+      </svg>
+   );
+}
+
+// Close Icon
+export function CloseIcon({
+   height = 16,
+   width = 16,
+   fill = "var(--inactive-icon-color)",
+}: Props) {
+   return (
+      <svg
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 256 256"
+         width={width}
+         height={height}
+         fill={fill}
+      >
+         <defs></defs>
+         <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+            <path
+               d="M 5 90 c -1.28 0 -2.559 -0.488 -3.536 -1.465 c -1.953 -1.952 -1.953 -5.118 0 -7.07 l 80 -80 c 1.951 -1.952 5.119 -1.952 7.07 0 c 1.953 1.953 1.953 5.119 0 7.071 l -80 80 C 7.559 89.512 6.28 90 5 90 z"
+               transform=" matrix(1 0 0 1 0 0) "
+               stroke-linecap="round"
+            />
+            <path
+               d="M 85 90 c -1.279 0 -2.56 -0.488 -3.535 -1.465 l -80 -80 c -1.953 -1.953 -1.953 -5.119 0 -7.071 s 5.118 -1.952 7.071 0 l 80 80 c 1.953 1.952 1.953 5.118 0 7.07 C 87.56 89.512 86.279 90 85 90 z"
+               transform=" matrix(1 0 0 1 0 0) "
+               stroke-linecap="round"
+            />
+         </g>
+      </svg>
+   );
+}
+
+// Lock Icon
+export function LockIcon({
+   height = 12,
+   width = 12,
+   fill = "var(--inactive-icon-color)",
+}: Props) {
+   return (
+      <svg
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 30 30"
+         width={width}
+         height={height}
+         fill={fill}
+      >
+         <path d="M 15 2 C 11.145666 2 8 5.1456661 8 9 L 8 11 L 6 11 C 4.895 11 4 11.895 4 13 L 4 25 C 4 26.105 4.895 27 6 27 L 24 27 C 25.105 27 26 26.105 26 25 L 26 13 C 26 11.895 25.105 11 24 11 L 22 11 L 22 9 C 22 5.2715823 19.036581 2.2685653 15.355469 2.0722656 A 1.0001 1.0001 0 0 0 15 2 z M 15 4 C 17.773666 4 20 6.2263339 20 9 L 20 11 L 10 11 L 10 9 C 10 6.2263339 12.226334 4 15 4 z" />
+         ;
+      </svg>
+   );
+}
 // Create Icon
 export function CreateIcon({
    height = 20,
