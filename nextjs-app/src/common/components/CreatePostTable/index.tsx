@@ -6,7 +6,7 @@ import Modal from "./Modal";
 
 function CreatePostTable() {
    return (
-      <div className="mt-5 h-28 rounded-lg bg-white px-4 py-3 shadow-md">
+      <div className="h-28 rounded-lg bg-white px-4 py-3 shadow-md">
          {/* modal */}
          {/* <Modal /> */}
 
@@ -15,8 +15,8 @@ function CreatePostTable() {
             <button className="relative h-[40px] w-[40px] overflow-hidden rounded-full">
                <Image src={avatar} layout="fill" alt="user-avatar" />
             </button>
-            <button className="w-full rounded-2xl border-none bg-secondary px-3 py-2 hover:bg-hover-btn">
-               <p className="text-gray-txt text-left text-[18px]">
+            <button className="w-full rounded-2xl border-none bg-secondary px-4 py-3 hover:bg-hover-btn">
+               <p className="text-gray-txt text-left text-[16px]">
                   Thanh ơi, bạn đang nghĩ gì thế?
                </p>
             </button>

@@ -9,7 +9,7 @@ import Comment from "./Comment";
 
 function Post() {
    return (
-      <div className="mt-5 grid gap-3 rounded-lg bg-white  py-3 shadow-md">
+      <div className="grid w-full gap-3 rounded-lg  bg-white py-3 shadow-md">
          {/* title + description */}
          <div className="grid gap-3 px-4">
             <div className="flex gap-3">

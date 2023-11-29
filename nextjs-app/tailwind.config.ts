@@ -46,7 +46,8 @@ const config: Config = {
             serif: ["Merriweather", "serif"],
          },
          boxShadow: {
-            modal: "0px 5px 15px rgba(0, 0, 0, 0.35) ",
+            modal: "0px 5px 15px rgba(0, 0, 0, 0.35)",
+            inner: "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset",
          },
       },
    },

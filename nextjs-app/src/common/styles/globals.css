@@ -33,6 +33,10 @@ h1 {
    font-size: 20px;
 }
 
+ul {
+   list-style: none;
+}
+
 button {
    border: none;
    background-color: transparent;

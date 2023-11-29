@@ -1,4 +1,4 @@
-import HomePage from "@modules/Homepage";
+import HomePage from "@modules/HomePage";
 
 const IndexPage = () => (
    <div>

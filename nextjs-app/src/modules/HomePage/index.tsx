@@ -8,8 +8,9 @@ function HomePage() {
       <div className="flex">
          {/* post side */}
          <div className="ms-3 grid w-[calc(100vw-290px)] justify-center">
-            <div className="w-[590px]">
+            <div className="my-5 grid w-[590px] gap-5">
                <CreatePostTable />
+               <Post />
                <Post />
             </div>
          </div>
