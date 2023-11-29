@@ -1,8 +1,7 @@
 import React from "react";
 import avt from "@public/avt.jpg";
 import Image from "next/image";
-import publicIcon from "@public/public-icon.svg";
-import like from "@public/like.svg";
+import { PublicIcon, LikeReactionIcon } from "@public/svg-icon";
 import commentIconSolid from "@public/commentIconSolid.png";
 import commentIcon from "@public/commentIcon.png";
 import likeIcon from "@public/likeIcon.png";
@@ -37,7 +36,7 @@ function Post() {
                      </p>
                      {/* dot */}
                      <div className="h-[2px] w-[2px] rounded-full bg-header-text" />
-                     <Image src={publicIcon} alt="public-icon" />
+                     <PublicIcon />
                   </div>
                </div>
             </div>
@@ -58,8 +57,8 @@ function Post() {
          <div className="px-4">
             {/* reaction */}
             <div className=" mx-4 flex justify-between py-2">
-               <div className="flex gap-2">
-                  <Image src={like} alt="like" />
+               <div className="flex items-center gap-2">
+                  <LikeReactionIcon />
                   <p className="text-gray-txt">200</p>
                </div>
 

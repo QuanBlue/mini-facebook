@@ -1,11 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import fbLogo from "@public/facebook-logo.png";
-import createIcon from "@public/create-icon.svg";
-import messengerIcon from "@public/messenger-icon.svg";
-import notificationIcon from "@public/notification-icon.svg";
 import avatar from "@public/avt.jpg";
-import HomepageIcon from "@public/svg/homepage-icon";
+import {
+   HomepageIcon,
+   CreateIcon,
+   MessengerIcon,
+   NotificationIcon,
+} from "@public/svg-icon";
 import TooltipButton from "@components/Button/TooltipButton";
 
 function Header() {
@@ -34,22 +36,27 @@ function Header() {
             </div>
             {/* End Feature  */}
 
-            {/* Notification  */}
+            {/* Setting and Control account  */}
             <div className="flex flex-auto items-center justify-end">
                <div className="notification grid w-[184px] grid-cols-4 gap-1">
+                  {/* Creation */}
                   <TooltipButton describe="Tạo">
                      <button className="circle-btn">
-                        <Image src={createIcon} alt="home icon" />
+                        <CreateIcon />
                      </button>
                   </TooltipButton>
+
+                  {/* Messenger */}
                   <TooltipButton describe="Messenger">
                      <button className="circle-btn">
-                        <Image src={messengerIcon} alt="messenger icon" />
+                        <MessengerIcon />
                      </button>
                   </TooltipButton>
+
+                  {/* Announcement */}
                   <TooltipButton describe="Thông báo">
                      <button className="circle-btn">
-                        <Image src={notificationIcon} alt="notification icon" />
+                        <NotificationIcon />
                      </button>
                   </TooltipButton>
 
