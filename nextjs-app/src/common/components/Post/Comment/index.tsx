@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import avt from "@public/avt.jpg";
 import Image from "next/image";
 

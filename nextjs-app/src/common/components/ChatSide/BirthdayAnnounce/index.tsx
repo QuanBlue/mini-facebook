@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import birthdayIcon from "@public/gift.png";
 import Image from "next/image";
 

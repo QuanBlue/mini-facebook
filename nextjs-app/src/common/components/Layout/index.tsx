@@ -1,5 +1,5 @@
 import Header from "@components/Header";
-import * as React from "react";
+import React from "react";
 
 function Layout({ children }: React.PropsWithChildren<{}>) {
    return (

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import ChatSide from "@components/ChatSide";
 import CreatePostTable from "@components/CreatePostTable";
 import Post from "@components/Post";
