@@ -7,8 +7,8 @@ function HomePage() {
    return (
       <div className="flex">
          {/* post side */}
-         <div className="ms-3 grid w-[calc(100vw-290px)] justify-center">
-            <div className="my-5 grid w-[590px] gap-5">
+         <div className="tablet:w-[calc(100vw-290px)] grid w-full flex-auto justify-center">
+            <div className="tablet:w-[590px] tablet:gap-5 my-5 grid w-full gap-1">
                <CreatePostTable />
                <Post />
                <Post />
@@ -16,8 +16,8 @@ function HomePage() {
          </div>
 
          {/* chat side */}
-         <div className="">
-            <div className="fixed right-0">
+         <div className="laptop:w-chat-side laptop:flex hidden">
+            <div className="fixed right-0 ">
                <ChatSide />
             </div>
          </div>

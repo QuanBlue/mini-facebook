@@ -12,7 +12,7 @@ function Modal() {
 
          {/* Foreground - Modal */}
          <div className="flex justify-center">
-            <div className="shadow-modal absolute top-[56px] w-1/2 rounded-2xl bg-white">
+            <div className="absolute top-[56px] w-1/2 rounded-2xl bg-white shadow-modal">
                {/* header */}
                <div className=" flex border-0 border-b border-solid border-hover-btn px-4 py-2">
                   <div className="flex flex-auto items-center justify-center">
@@ -49,7 +49,7 @@ function Modal() {
                               {/* post scope */}
                               <button className="flex items-center gap-1 rounded-lg bg-secondary-btn px-2 py-1">
                                  <LockIcon />
-                                 <strong className="text-[12px]">
+                                 <strong className="text-tiny">
                                     Chỉ mình tôi
                                  </strong>
                                  <DownArrowIcon />
@@ -59,7 +59,7 @@ function Modal() {
                      </div>
 
                      <div>
-                        <p className="text-gray-txt text-left ">
+                        <p className="text-left text-gray-txt ">
                            Thanh ơi, bạn đang nghĩ gì thế?
                         </p>
                      </div>
@@ -67,7 +67,7 @@ function Modal() {
                      <button className="rounded-lg border-[1px] border-solid border-hover-btn p-4 hover:bg-transparent">
                         <div className="flex items-center justify-between">
                            <strong>Thêm vào bài viết của bạn</strong>
-                           <button className="circle-btn hover:bg-gray bg-transparent">
+                           <button className="circle-btn bg-transparent hover:bg-gray">
                               <Image
                                  src={pictureIcon}
                                  width={24}

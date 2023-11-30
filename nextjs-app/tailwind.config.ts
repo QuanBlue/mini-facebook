@@ -35,19 +35,40 @@ const config: Config = {
             black: "#000000",
             transparent: "transparent",
          },
+
+         width: {
+            "chat-side": "248px",
+         },
+
          fontSize: {
+            tiny: "12px",
+            regular: "16px",
+
             sm: ["14px", "20px"],
             base: ["16px", "24px"],
             lg: ["20px", "28px"],
             xl: ["24px", "32px"],
          },
+
          fontFamily: {
             sans: ["Graphik", "sans-serif"],
             serif: ["Merriweather", "serif"],
          },
+
          boxShadow: {
             modal: "0px 5px 15px rgba(0, 0, 0, 0.35)",
             inner: "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset",
+         },
+
+         screens: {
+            tablet: "700px",
+            // => @media (min-width: 640px) { ... }
+
+            laptop: "900px",
+            // => @media (min-width: 1024px) { ... }
+
+            desktop: "1280px",
+            // => @media (min-width: 1280px) { ... }
          },
       },
    },

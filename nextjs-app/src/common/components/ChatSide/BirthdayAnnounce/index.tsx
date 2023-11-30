@@ -5,7 +5,7 @@ import Image from "next/image";
 function BirthdayAnnounce() {
    return (
       <div className="px-2">
-         <p className="text-gray-txt pb-2 pt-5 text-[16px] font-bold">
+         <p className="text-regular pb-2 pt-5 font-bold text-gray-txt">
             Sinh nhật
          </p>
          <div className="flex items-center gap-2 py-2">

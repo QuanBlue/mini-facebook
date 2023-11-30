@@ -35,9 +35,9 @@ function Comment() {
 
                {/* time */}
                <div className="flex items-center gap-4 ps-1 pt-2">
-                  <p className="text-gray-txt text-[12px]">1 giờ</p>
-                  <button className="text-btn text-[12px]">Thích</button>
-                  <button className="text-btn text-[12px]">Phản hồi</button>
+                  <p className="text-tiny text-gray-txt">1 giờ</p>
+                  <button className="text-btn text-tiny">Thích</button>
+                  <button className="text-btn text-tiny">Phản hồi</button>
                </div>
             </div>
          </div>
