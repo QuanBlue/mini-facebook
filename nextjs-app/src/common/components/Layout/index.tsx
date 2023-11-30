@@ -5,7 +5,9 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
    return (
       <div>
          <Header />
-         <div className="relative top-[56px] w-full">{children}</div>
+         <div className="tablet:top-[56px] relative top-[117px] w-full">
+            {children}
+         </div>
       </div>
    );
 }

@@ -38,7 +38,7 @@ function CreatePostTable() {
                      Ảnh/video
                   </strong>
 
-                  {/* < tablet */}
+                  {/* mobile */}
                   <strong className="tablet:hidden block text-gray-txt">
                      Ảnh
                   </strong>

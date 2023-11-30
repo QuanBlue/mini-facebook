@@ -43,6 +43,7 @@ const config: Config = {
          fontSize: {
             tiny: "12px",
             regular: "16px",
+            huge: "24px",
 
             sm: ["14px", "20px"],
             base: ["16px", "24px"],
