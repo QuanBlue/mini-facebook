@@ -10,22 +10,27 @@ function CreatePostTable() {
          {/* modal */}
          {/* <Modal /> */}
 
+         {/* header */}
+         <div className="-mb-3 block tablet:hidden">
+            <strong className="text-regular">Bài viết</strong>
+         </div>
+
          {/* input field */}
-         <div className="tablet:flex-col flex flex-row">
+         <div className="flex flex-row tablet:flex-col">
             <div className="flex flex-auto items-center gap-3">
-               <button className="tablet:h-[40px] tablet:w-[40px] relative h-[48px] w-[48px] overflow-hidden rounded-full">
+               <button className="relative h-[48px] w-[48px] overflow-hidden rounded-full tablet:h-[40px] tablet:w-[40px]">
                   <Image src={avatar} layout="fill" alt="user-avatar" />
                </button>
                <button className="w-full rounded-2xl border-none bg-secondary px-4 py-3 hover:bg-hover-btn">
-                  <p className="text-regular text-left text-gray-txt">
+                  <p className="text-left text-regular text-gray-txt">
                      Thanh ơi, bạn đang nghĩ gì thế?
                   </p>
                </button>
             </div>
 
             {/* attach */}
-            <div className=" tablet:border-t mt-3 border-0 border-solid border-hover-btn pt-2">
-               <button className="tablet:flex-row flex flex-col items-center justify-center gap-3 rounded-lg">
+            <div className=" mt-3 border-0 border-solid border-hover-btn pt-2 tablet:border-t">
+               <button className="flex flex-col items-center justify-center gap-3 rounded-lg tablet:flex-row">
                   <Image
                      src={pictureIcon}
                      width={24}
@@ -34,12 +39,12 @@ function CreatePostTable() {
                   />
 
                   {/* > tablet */}
-                  <strong className="tablet:block hidden text-gray-txt">
+                  <strong className="hidden text-gray-txt tablet:block">
                      Ảnh/video
                   </strong>
 
                   {/* mobile */}
-                  <strong className="tablet:hidden block text-gray-txt">
+                  <strong className="block text-gray-txt tablet:hidden">
                      Ảnh
                   </strong>
                </button>

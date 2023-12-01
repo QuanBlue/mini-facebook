@@ -38,12 +38,16 @@ const config: Config = {
 
          width: {
             "chat-side": "248px",
+            "personal-page-left-side": "360px",
+            "personal-page-right-side": "500px",
+            "personal-page-side": "700px",
          },
 
          fontSize: {
             tiny: "12px",
             regular: "16px",
-            huge: "24px",
+            big: "24px",
+            huge: "32px",
 
             sm: ["14px", "20px"],
             base: ["16px", "24px"],
