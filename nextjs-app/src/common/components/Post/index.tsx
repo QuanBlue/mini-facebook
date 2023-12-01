@@ -14,7 +14,7 @@ function Post() {
          <div className="grid gap-3 px-4">
             <div className="flex gap-3">
                {/* avatar */}
-               <button className="tablet:h-[38px] tablet:w-[38px] relative h-[48px] w-[48px] overflow-hidden rounded-full">
+               <button className="relative h-[48px] w-[48px] overflow-hidden rounded-full tablet:h-[38px] tablet:w-[38px]">
                   <Image src={avt} layout="fill" alt="user-avatar" />
                </button>
 
@@ -31,7 +31,7 @@ function Post() {
                      <p>
                         <a
                            href="#"
-                           className="text-tiny my-1 text-gray-txt no-underline"
+                           className="my-1 text-tiny text-gray-txt no-underline"
                         >
                            1 giờ
                         </a>
@@ -52,11 +52,11 @@ function Post() {
          </div>
 
          {/* image */}
-         <div className="flex justify-center">
+         <div className="w-full">
             <img
                src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/404689916_736093908551057_4164295816179904700_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEpkzrxfiOFObWrHDj1cyrxrMrpw7YThb6syunDthOFvnQooGsyebRcvz6Nsfyy0iW-jq9TgnTTktcO5p3pkL2P&_nc_ohc=QtIyN5lqsDkAX9UzU-Q&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfCaJ1rbJ6kUHyOK343JWTy5KD0dAfzm6Uy_gEn3gz5iYQ&oe=656B894F"
                alt="picture"
-               className="tablet:h-auto h-[400px] max-w-[500px] object-fill"
+               className="h-[400px] max-w-full object-cover tablet:h-auto"
             />
          </div>
 
@@ -65,46 +65,46 @@ function Post() {
             <div className=" mx-4 flex justify-between py-2">
                <div className="flex items-center gap-2">
                   <LikeReactionIcon />
-                  <div className="tablet:block hidden">
+                  <div className="hidden tablet:block">
                      <p className="text-gray-txt">200</p>
                   </div>
                </div>
 
-               <div className="tablet:flex hidden gap-2">
+               <div className="hidden gap-2 tablet:flex">
                   <p className="text-gray-txt">20</p>
                   <Image src={commentIconSolid} alt="comment" />
                </div>
             </div>
 
             {/* interaction */}
-            <div className="tablet:border-y my-2 flex justify-around gap-4 border-0 border-b border-solid border-hover-btn py-1">
+            <div className="my-2 flex justify-around gap-4 border-0 border-b border-solid border-hover-btn py-1 tablet:border-y">
                {/* Like */}
-               <button className="tablet:bg-transparent flex flex-auto items-center justify-center gap-2 rounded-xl bg-secondary hover:bg-gray">
+               <button className="flex flex-auto items-center justify-center gap-2 rounded-xl bg-secondary hover:bg-gray tablet:bg-transparent">
                   <Image src={likeIcon} alt="like icon" />
 
                   <div>
                      {/* > tablet */}
-                     <strong className="tablet:block hidden text-gray-txt">
+                     <strong className="hidden text-gray-txt tablet:block">
                         Thích
                      </strong>
 
                      {/* mobile */}
-                     <p className="tablet:hidden block text-gray-txt">200</p>
+                     <p className="block text-gray-txt tablet:hidden">200</p>
                   </div>
                </button>
 
                {/* comment */}
-               <button className="tablet:bg-transparent flex flex-auto items-center justify-center gap-2 rounded-xl bg-secondary hover:bg-gray">
+               <button className="flex flex-auto items-center justify-center gap-2 rounded-xl bg-secondary hover:bg-gray tablet:bg-transparent">
                   <Image src={commentIcon} alt="comment icon" />
 
                   <div>
                      {/* > tablet */}
-                     <strong className="tablet:block hidden text-gray-txt">
+                     <strong className="hidden text-gray-txt tablet:block">
                         Bình luận
                      </strong>
 
                      {/* mobile */}
-                     <p className="tablet:hidden block text-gray-txt">20</p>
+                     <p className="block text-gray-txt tablet:hidden">20</p>
                   </div>
                </button>
             </div>

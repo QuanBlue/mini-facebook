@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import avatar from "@public/avt.jpg";
 import pictureIcon from "@public/picture.png";
 import Modal from "./Modal";
 
 function CreatePostTable() {
+   let [isModalOpen, setIsModalOpen] = useState(false);
+
    return (
       <div className="h-28 rounded-lg bg-white px-4 py-3 shadow-md">
          {/* modal */}
-         {/* <Modal /> */}
+         {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
 
          {/* header */}
          <div className="-mb-3 block tablet:hidden">
@@ -21,7 +23,10 @@ function CreatePostTable() {
                <button className="relative h-[48px] w-[48px] overflow-hidden rounded-full tablet:h-[40px] tablet:w-[40px]">
                   <Image src={avatar} layout="fill" alt="user-avatar" />
                </button>
-               <button className="w-full rounded-2xl border-none bg-secondary px-4 py-3 hover:bg-hover-btn">
+               <button
+                  className="w-full rounded-2xl border-none bg-secondary px-4 py-3 hover:bg-hover-btn"
+                  onClick={() => setIsModalOpen(true)}
+               >
                   <p className="text-left text-regular text-gray-txt">
                      Thanh ơi, bạn đang nghĩ gì thế?
                   </p>
@@ -30,7 +35,10 @@ function CreatePostTable() {
 
             {/* attach */}
             <div className=" mt-3 border-0 border-solid border-hover-btn pt-2 tablet:border-t">
-               <button className="flex flex-col items-center justify-center gap-3 rounded-lg tablet:flex-row">
+               <button
+                  className="flex flex-col items-center justify-center gap-3 rounded-lg tablet:flex-row"
+                  onClick={() => setIsModalOpen(true)}
+               >
                   <Image
                      src={pictureIcon}
                      width={24}

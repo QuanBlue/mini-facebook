@@ -38,6 +38,7 @@ const config: Config = {
 
          width: {
             "chat-side": "248px",
+            "chat-box": "330px",
             "personal-page-left-side": "360px",
             "personal-page-right-side": "500px",
             "personal-page-side": "700px",
@@ -53,6 +54,10 @@ const config: Config = {
             base: ["16px", "24px"],
             lg: ["20px", "28px"],
             xl: ["24px", "32px"],
+         },
+
+         borderRadius: {
+            "half-circle": "50px",
          },
 
          fontFamily: {

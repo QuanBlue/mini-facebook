@@ -4,21 +4,33 @@ import { CloseIcon, DownArrowIcon, LockIcon } from "@public/svg-icon";
 import avt from "@public/avt.jpg";
 import pictureIcon from "@public/picture.png";
 
-function Modal() {
+interface ModalProps {
+   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Modal({ setIsModalOpen }: ModalProps) {
    return (
       <div className="fixed left-0 top-0 z-50 h-screen w-screen">
          {/* Background */}
-         <div className=" h-full w-full bg-white opacity-60" />
+         <div
+            className=" h-full w-full bg-white opacity-60"
+            onClick={() => setIsModalOpen(false)}
+         />
 
          {/* Foreground - Modal */}
          <div className="flex justify-center">
-            <div className="absolute top-[56px] w-1/2 rounded-2xl bg-white shadow-modal">
+            <div className="absolute top-1/4 w-1/2 rounded-2xl bg-white shadow-modal">
                {/* header */}
                <div className=" flex border-0 border-b border-solid border-hover-btn px-4 py-2">
                   <div className="flex flex-auto items-center justify-center">
                      <h1>Tạo bài viết</h1>
                   </div>
-                  <button className="circle-btn">
+
+                  {/* close modal */}
+                  <button
+                     className="circle-btn h-[36px] w-[36px]"
+                     onClick={() => setIsModalOpen(false)}
+                  >
                      <CloseIcon />
                   </button>
                </div>
