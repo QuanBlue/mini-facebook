@@ -47,6 +47,41 @@ function ChatBox() {
          content: "mai vô đi chơi với ny hay ở chỗ ngta",
          isOwn: false,
       },
+      {
+         time: "10:00",
+         content: "uk",
+         isOwn: false,
+      },
+      {
+         time: "10:01",
+         content: "mai vô đi chơi với ny hay ở chỗ ngta",
+         isOwn: true,
+      },
+      {
+         time: "10:02",
+         content: "Đi chơi",
+         isOwn: false,
+      },
+      {
+         time: "10:02",
+         content: "Ảnh đặt a",
+         isOwn: false,
+      },
+      {
+         time: "10:15",
+         content: "uh",
+         isOwn: true,
+      },
+      {
+         time: "10:15",
+         content: "Dep khong",
+         isOwn: true,
+      },
+      {
+         time: "10:01",
+         content: "mai vô đi chơi với ny hay ở chỗ ngta",
+         isOwn: false,
+      },
    ];
 
    let element_message = messages.map((message, index) => {
@@ -61,7 +96,7 @@ function ChatBox() {
    });
 
    return (
-      <div className="w-chat-box rounded-t-xl bg-white shadow-md">
+      <div className="mx-3 w-chat-box rounded-t-xl bg-white shadow-modal">
          {/* header */}
          <div className="flex items-center justify-between px-2 py-1 shadow-md">
             <div>
@@ -89,15 +124,13 @@ function ChatBox() {
          </div>
 
          {/* body */}
-         <div className="h-[370px] overflow-y-scroll px-2">
-            {element_message}
-         </div>
+         <div className="scroll  h-[370px]  px-2">{element_message}</div>
 
          {/* footer */}
          <div className="px-2 py-3">
             <form className="flex h-[36px] items-center justify-between">
                <input
-                  className="rounded-half-circle h-full flex-auto border-none bg-secondary px-3"
+                  className="h-full flex-auto rounded-half-circle border-none bg-secondary px-3"
                   id="message"
                   type="text"
                   placeholder="Aa"

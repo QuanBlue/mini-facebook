@@ -1,0 +1,24 @@
+::-webkit-scrollbar {
+   width: 7px;
+}
+
+::-webkit-scrollbar:hover {
+   background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: var(--text-light-gray);
+   border-radius: 10px;
+}
+
+.scroll {
+   margin: 0px 2px;
+   overflow: hidden;
+   scrollbar-gutter: stable;
+}
+
+.scroll:hover {
+   overflow-y: auto;
+}
+
+/* https://dev.to/rashidshamloo/preventing-the-layout-shift-caused-by-scrollbars-2flp */

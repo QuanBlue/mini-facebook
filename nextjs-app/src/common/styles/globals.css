@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./scrollbar.css";
+
+/* root */
 :root {
    --primary-color: #1c77e9;
    --secondary-color: #f0f2f5;
@@ -17,6 +20,7 @@
    --text-gray: #696b6f;
    --text-dark-gray: rgb(99, 96, 96);
 }
+/* end root */
 
 body {
    background-color: var(--secondary-color);
