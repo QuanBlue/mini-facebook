@@ -5,18 +5,37 @@ import pictureIcon from "@public/picture.png";
 import Modal from "@components/Modal";
 import CreatePost from "./CreatePost";
 import PostScope from "./PostScope";
+import { scopes, TypeScope } from "./PostScope";
 
 function CreatePostTable() {
    let [isModalOpen, setIsModalOpen] = useState(true);
+   let [isChooseScope, setIsChooseScope] = useState(false);
+   let [scope, setScope] = React.useState<TypeScope>(scopes[0]);
 
    return (
       <div className="h-28 rounded-lg bg-white px-4 py-3 shadow-md">
          {/* modal */}
          {isModalOpen && (
             <Modal
-               header_title="Tạo bài viết"
-               // body={<CreatePost />}
-               body={<PostScope />}
+               header_title={
+                  isChooseScope ? "Đối tượng của bài viết" : "Tạo bài viết"
+               }
+               body={
+                  isChooseScope ? (
+                     <PostScope
+                        scope={scope}
+                        setScope={setScope}
+                        setIsChooseScope={setIsChooseScope}
+                     />
+                  ) : (
+                     <CreatePost
+                        scope={scope}
+                        setIsChooseScope={setIsChooseScope}
+                     />
+                  )
+               }
+               canBack={isChooseScope ? true : false}
+               clickBackAction={() => setIsChooseScope(false)}
                setIsModalOpen={setIsModalOpen}
             />
          )}

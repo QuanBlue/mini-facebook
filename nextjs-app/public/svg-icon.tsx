@@ -77,6 +77,26 @@ export function DownArrowIcon({
    );
 }
 
+// Left Arrow Icon
+export function LeftArrowIcon({
+   height = 16,
+   width = 16,
+   fill = "var(--inactive-icon-color)",
+}: Props) {
+   return (
+      <svg
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 92 92"
+         width={width}
+         height={height}
+         fill={fill}
+      >
+         <path d="M84 46c0 2.2-1.8 4-4 4H21.6l18.1 18.2c1.6 1.6 1.6 4.1 0 5.7-.7.7-1.7 1.1-2.8 1.1-1 0-2.1-.4-2.8-1.2l-24.9-25c-1.6-1.6-1.6-4.1 0-5.6l24.9-25c1.6-1.6 4.1-1.6 5.7 0 1.6 1.6 1.6 4.1 0 5.7L21.6 42H80c2.2 0 4 1.8 4 4z"></path>
+         ;
+      </svg>
+   );
+}
+
 // Camera Icon
 export function CameraIcon({
    height = 20,
@@ -125,12 +145,12 @@ export function CloseIcon({
             <path
                d="M 5 90 c -1.28 0 -2.559 -0.488 -3.536 -1.465 c -1.953 -1.952 -1.953 -5.118 0 -7.07 l 80 -80 c 1.951 -1.952 5.119 -1.952 7.07 0 c 1.953 1.953 1.953 5.119 0 7.071 l -80 80 C 7.559 89.512 6.28 90 5 90 z"
                transform=" matrix(1 0 0 1 0 0) "
-               stroke-linecap="round"
+               strokeLinecap="round"
             />
             <path
                d="M 85 90 c -1.279 0 -2.56 -0.488 -3.535 -1.465 l -80 -80 c -1.953 -1.953 -1.953 -5.119 0 -7.071 s 5.118 -1.952 7.071 0 l 80 80 c 1.953 1.952 1.953 5.118 0 7.07 C 87.56 89.512 86.279 90 85 90 z"
                transform=" matrix(1 0 0 1 0 0) "
-               stroke-linecap="round"
+               strokeLinecap="round"
             />
          </g>
       </svg>
@@ -349,9 +369,9 @@ export function MessengerIcon({
             <path
                fill="none"
                stroke="#212121"
-               stroke-linecap="round"
-               stroke-linejoin="round"
-               stroke-width="2"
+               strokeLinecap="round"
+               strokeLinejoin="round"
+               strokeWidth="2"
                d="M14.268,2.112A13,13,0,0,0,6,23.3v3.661A1.258,1.258,0,0,0,7.82,28.09l2.663-1.332a12.9,12.9,0,0,0,7.25,1.126A13,13,0,1,0,14.268,2.112Z"
             ></path>
             <path d="M9.049,18.163,13.64,11.63a.64.64,0,0,1,.94-.2l3.075,2.307a.641.641,0,0,0,.714.036l3.745-2.646a.64.64,0,0,1,.9.835l-3.707,6.414a.64.64,0,0,1-.9.263L14.3,16.181a.638.638,0,0,0-.615-.024l-3.794,2.9A.641.641,0,0,1,9.049,18.163Z"></path>
@@ -388,7 +408,7 @@ export function PublicIcon({
 }: Props) {
    return (
       <svg viewBox="0 0 16 16" width={width} height={height} fill={fill}>
-         <g fill-rule="evenodd" transform="translate(-448 -544)">
+         <g fillRule="evenodd" transform="translate(-448 -544)">
             <g>
                <path
                   d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
@@ -399,7 +419,7 @@ export function PublicIcon({
                   transform="translate(354 143.5)"
                ></path>
                <path
-                  fill-rule="nonzero"
+                  fillRule="nonzero"
                   d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
                   transform="translate(354 143.5)"
                ></path>
@@ -434,7 +454,7 @@ export function LikeReactionIcon({
          <path
             d="M16.0001 7.9996c0 4.418-3.5815 7.9996-7.9995 7.9996S.001 12.4176.001 7.9996 3.5825 0 8.0006 0C12.4186 0 16 3.5815 16 7.9996Z"
             fill="url(#paint2_radial_15251_63610)"
-            fill-opacity=".5"
+            fillOpacity=".5"
          />
          <path
             d="M7.3014 3.8662a.6974.6974 0 0 1 .6974-.6977c.6742 0 1.2207.5465 1.2207 1.2206v1.7464a.101.101 0 0 0 .101.101h1.7953c.992 0 1.7232.9273 1.4917 1.892l-.4572 1.9047a2.301 2.301 0 0 1-2.2374 1.764H6.9185a.5752.5752 0 0 1-.5752-.5752V7.7384c0-.4168.097-.8278.2834-1.2005l.2856-.5712a3.6878 3.6878 0 0 0 .3893-1.6509l-.0002-.4496ZM4.367 7a.767.767 0 0 0-.7669.767v3.2598a.767.767 0 0 0 .767.767h.767a.3835.3835 0 0 0 .3835-.3835V7.3835A.3835.3835 0 0 0 5.134 7h-.767Z"
@@ -449,8 +469,8 @@ export function LikeReactionIcon({
                gradientUnits="userSpaceOnUse"
                gradientTransform="rotate(90 .0005 8) scale(7.99958)"
             >
-               <stop offset=".5618" stop-color="#0866FF" stop-opacity="0" />
-               <stop offset="1" stop-color="#0866FF" stop-opacity=".1" />
+               <stop offset=".5618" stopColor="#0866FF" stopOpacity="0" />
+               <stop offset="1" stopColor="#0866FF" stopOpacity=".1" />
             </radialGradient>
             <radialGradient
                id="paint2_radial_15251_63610"
@@ -460,8 +480,8 @@ export function LikeReactionIcon({
                gradientUnits="userSpaceOnUse"
                gradientTransform="rotate(45 -4.5257 10.9237) scale(10.1818)"
             >
-               <stop offset=".3143" stop-color="#02ADFC" />
-               <stop offset="1" stop-color="#02ADFC" stop-opacity="0" />
+               <stop offset=".3143" stopColor="#02ADFC" />
+               <stop offset="1" stopColor="#02ADFC" stopOpacity="0" />
             </radialGradient>
             <linearGradient
                id="paint0_linear_15251_63610"
@@ -471,9 +491,9 @@ export function LikeReactionIcon({
                y2="13.5993"
                gradientUnits="userSpaceOnUse"
             >
-               <stop stop-color="#02ADFC" />
-               <stop offset=".5" stop-color="#0866FF" />
-               <stop offset="1" stop-color="#2B7EFF" />
+               <stop stopColor="#02ADFC" />
+               <stop offset=".5" stopColor="#0866FF" />
+               <stop offset="1" stopColor="#2B7EFF" />
             </linearGradient>
          </defs>
       </svg>
