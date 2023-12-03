@@ -52,6 +52,12 @@ button:hover {
    background-color: #e4e6e9;
 }
 
+input {
+   padding: 14px 16px;
+   border-radius: 7px;
+   border: 1px solid #d8d8d8;
+}
+
 .circle-btn {
    border-radius: 50%;
    width: 40px;

@@ -2,15 +2,24 @@ import React, { useState } from "react";
 import Image from "next/image";
 import avatar from "@public/avt.jpg";
 import pictureIcon from "@public/picture.png";
-import Modal from "./Modal";
+import Modal from "@components/Modal";
+import CreatePost from "./CreatePost";
+import PostScope from "./PostScope";
 
 function CreatePostTable() {
-   let [isModalOpen, setIsModalOpen] = useState(false);
+   let [isModalOpen, setIsModalOpen] = useState(true);
 
    return (
       <div className="h-28 rounded-lg bg-white px-4 py-3 shadow-md">
          {/* modal */}
-         {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
+         {isModalOpen && (
+            <Modal
+               header_title="Tạo bài viết"
+               // body={<CreatePost />}
+               body={<PostScope />}
+               setIsModalOpen={setIsModalOpen}
+            />
+         )}
 
          {/* header */}
          <div className="-mb-3 block tablet:hidden">

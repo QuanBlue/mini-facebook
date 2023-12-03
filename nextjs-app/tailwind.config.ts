@@ -28,6 +28,7 @@ const config: Config = {
             "dark-gray-txt": "var(--text-dark-gray)",
 
             "active-status": "#31A24C",
+            "create-account": "#42B72A",
 
             gray: "#f2f2f2",
             white: "#FFFFFF",
@@ -37,6 +38,7 @@ const config: Config = {
          },
 
          width: {
+            login: "315px",
             "chat-side": "248px",
             "chat-box": "330px",
             "personal-page-left-side": "360px",

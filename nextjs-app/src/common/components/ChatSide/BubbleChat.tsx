@@ -1,5 +1,5 @@
 import React from "react";
-import { TypeFriend } from "../index";
+import { TypeFriend } from "./index";
 
 function BubbleChat({ name, avatar, uid, isOnline }: TypeFriend) {
    return (

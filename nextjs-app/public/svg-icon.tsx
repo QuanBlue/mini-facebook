@@ -25,8 +25,8 @@ export function HomepageIcon({
    );
 }
 
-// Down Arrow Icon
-export function DownArrowIcon({
+// Down Arrow Solid Icon
+export function DownArrowSolidIcon({
    height = 12,
    width = 12,
    fill = "var(--inactive-icon-color)",
@@ -49,6 +49,30 @@ export function DownArrowIcon({
 -33 13 -140 13 -107 0 -140 -3 -140 -13z"
             />
          </g>
+      </svg>
+   );
+}
+
+// Down Arrow Icon
+export function DownArrowIcon({
+   height = 12,
+   width = 12,
+   fill = "var(--inactive-icon-color)",
+}: Props) {
+   return (
+      <svg
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 330 330"
+         width={width}
+         height={height}
+         fill={fill}
+      >
+         <path
+            id="XMLID_225_"
+            d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+	c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+	s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+         />
       </svg>
    );
 }
@@ -113,8 +137,8 @@ export function CloseIcon({
    );
 }
 
-// Lock Icon
-export function LockIcon({
+// Private Icon
+export function PrivateIcon({
    height = 12,
    width = 12,
    fill = "var(--inactive-icon-color)",
@@ -363,14 +387,8 @@ export function PublicIcon({
    fill = "rgb(101,103,107)",
 }: Props) {
    return (
-      <svg
-         xmlns="http://www.w3.org/2000/svg"
-         viewBox="0 0 16 16"
-         width={width}
-         height={height}
-         fill={fill}
-      >
-         <g fill-rule="evenodd" transform="translate(-48 48)">
+      <svg viewBox="0 0 16 16" width={width} height={height} fill={fill}>
+         <g fill-rule="evenodd" transform="translate(-448 -544)">
             <g>
                <path
                   d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434"
