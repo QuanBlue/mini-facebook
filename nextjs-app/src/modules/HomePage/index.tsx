@@ -1,6 +1,6 @@
 import React from "react";
 import ChatSide from "@components/ChatSide";
-import CreatePostTable from "@components/CreatePostTable";
+import CreatePostForm from "@components/CreatePostForm";
 import Post from "@components/Post";
 import ChatBox from "@components/ChatBox";
 
@@ -10,7 +10,7 @@ function HomePage() {
          {/* post side */}
          <div className="grid w-full flex-auto justify-center tablet:w-[calc(100vw-290px)]">
             <div className="my-5 grid w-full gap-1 tablet:w-[590px] tablet:gap-5">
-               <CreatePostTable />
+               <CreatePostForm />
                <Post />
                <Post />
             </div>

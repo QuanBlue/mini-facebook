@@ -4,7 +4,7 @@ import { CameraIcon } from "@public/svg-icon";
 import QuickFriend from "./QuickFriend";
 import Post from "@components/Post";
 import avt from "@public/avt.jpg";
-import CreatePostTable from "@components/CreatePostTable";
+import CreatePostForm from "@components/CreatePostForm";
 
 function PersonalPage() {
    return (
@@ -88,7 +88,7 @@ function PersonalPage() {
          {/* body */}
          <div className="flex flex-col items-center gap-4 laptop:flex-row laptop:items-start laptop:justify-center">
             {/* left side */}
-            <div className="laptop:w-personal-page-left-side w-personal-page-side">
+            <div className="w-personal-page-side laptop:w-personal-page-left-side">
                <div className="grid gap-4">
                   {/* introduce */}
                   <div className="hidden tablet:block">
@@ -160,7 +160,7 @@ function PersonalPage() {
                   <div className="grid gap-1 rounded-lg bg-white px-4 py-5 shadow-md tablet:gap-4">
                      <div>
                         <div className="flex justify-between">
-                           <h1 className="tablet:text-big text-regular">
+                           <h1 className="text-regular tablet:text-big">
                               Bạn bè
                            </h1>
 
@@ -188,9 +188,9 @@ function PersonalPage() {
             </div>
 
             {/* right side */}
-            <div className="laptop:w-personal-page-right-side w-personal-page-side">
+            <div className="w-personal-page-side laptop:w-personal-page-right-side">
                <div className="grid gap-4">
-                  <CreatePostTable />
+                  <CreatePostForm />
                   <Post />
                   <Post />
                   <Post />

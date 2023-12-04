@@ -4,6 +4,8 @@
 
 @import "./scrollbar.css";
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
 /* root */
 :root {
    --primary-color: #1c77e9;
@@ -31,6 +33,7 @@ body {
    margin: 0px;
    font-size: 14px;
    color: black;
+   font-family: "Roboto", sans-serif;
 }
 
 h1 {

@@ -5,7 +5,6 @@ export interface ModalProps {
    header_title: string;
    body: React.ReactNode;
    setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
-
    canBack?: boolean;
    clickBackAction: () => void | undefined;
 }
@@ -62,7 +61,7 @@ function Modal({
                      )}
                   </div>
 
-                  <div className="grid gap-4 p-4">
+                  <div className="grid h-[350px] gap-4">
                      {/* body */}
                      {body}
                   </div>
