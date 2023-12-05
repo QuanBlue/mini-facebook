@@ -69,6 +69,7 @@ const config: Config = {
 
          boxShadow: {
             modal: "0px 5px 15px rgba(0, 0, 0, 0.35)",
+            pre_message: "0px 5px 15px rgba(0, 0, 0, 0.5)",
             inner: "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset",
          },
 

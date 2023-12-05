@@ -8,9 +8,9 @@ export interface CreatePostContextProps {
    setIsChooseScope: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const CreatePostContext = createContext<
-   CreatePostContextProps | undefined
->(undefined);
+export const CreatePostContext = createContext<CreatePostContextProps | null>(
+   null,
+);
 
 // Custom hook
 export const useCreatePostContext = () => {

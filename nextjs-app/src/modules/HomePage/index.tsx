@@ -2,7 +2,6 @@ import React from "react";
 import ChatSide from "@components/ChatSide";
 import CreatePostForm from "@components/CreatePostForm";
 import Post from "@components/Post";
-import ChatBox from "@components/ChatBox";
 
 function HomePage() {
    return (
@@ -21,11 +20,6 @@ function HomePage() {
             <div className="fixed right-0 ">
                <ChatSide />
             </div>
-         </div>
-
-         {/* Chat box */}
-         <div className="fixed bottom-0 right-0">
-            <ChatBox />
          </div>
       </div>
    );

@@ -38,7 +38,7 @@ export const scopes = [
 
 function CreatePostTable() {
    const context = useCreatePostContext();
-   let [isModalOpen, setIsModalOpen] = useState(true);
+   let [isModalOpen, setIsModalOpen] = useState(false);
 
    return (
       <div className="h-28 rounded-lg bg-white px-4 py-3 shadow-md">

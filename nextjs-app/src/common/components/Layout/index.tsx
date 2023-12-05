@@ -1,5 +1,6 @@
 import Header from "@components/Header";
 import { useRouter } from "next/router";
+import ChatBoxController from "@components/ChatBoxController";
 import React from "react";
 
 function Layout({ children }: React.PropsWithChildren<{}>) {
@@ -10,6 +11,11 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
          {showHeader && <Header />}
          <div className="relative top-[117px] w-full tablet:top-[56px]">
             {children}
+
+            {/* Chat box */}
+            <div className="fixed bottom-0 right-0">
+               <ChatBoxController />
+            </div>
          </div>
       </div>
    );
