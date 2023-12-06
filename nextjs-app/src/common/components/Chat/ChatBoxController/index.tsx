@@ -1,12 +1,12 @@
 import React from "react";
-import ChatBoxProvider from "./context";
 import ChatBoxArea from "./ChatBoxArea";
+import ChatProvider from "../context";
 
 function ChatBoxController() {
    return (
-      <ChatBoxProvider>
+      <ChatProvider>
          <ChatBoxArea />
-      </ChatBoxProvider>
+      </ChatProvider>
    );
 }
 

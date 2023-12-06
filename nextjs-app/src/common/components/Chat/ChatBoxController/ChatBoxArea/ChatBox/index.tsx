@@ -1,41 +1,56 @@
 import { CloseIcon, MinimizeIcon, SendMessageIcon } from "@public/svg-icon";
 import React from "react";
 import Message from "./Message";
-import { TypeChatBox, TypeMessage, useChatBox } from "../../context";
+import { TypeFriend, TypeChat, TypeMessage, useChat } from "../../../context";
 import TooltipButton from "@components/Button/TooltipButton";
 
 interface ChatBoxProps {
    messages: TypeMessage[];
    isOnline: boolean;
+   avatar: string;
    username: string;
-   msg_id: number;
+   uid: string;
 }
 
-function ChatBox({ messages, isOnline, username, msg_id }: ChatBoxProps) {
+function ChatBox({ messages, isOnline, avatar, username, uid }: ChatBoxProps) {
    let element_message = messages.map((message, index) => {
       return (
          <Message
             key={index}
             time={message.time}
+            avatar={avatar}
             content={message.content}
             isOwn={message.isOwn}
          />
       );
    });
 
-   const context = useChatBox();
+   const context = useChat();
 
-   function minimizeChatBox(msg_id: number) {
-      let temp_msg: TypeChatBox[] = [...context.message];
+   function minimizeChatBox(uid: string) {
+      let temp_fr: TypeChat[] = [...context.friendOnChatBox];
 
-      temp_msg[msg_id].isExpand = false;
-      context.setMessage(temp_msg);
+      for (let i = 0; i < temp_fr.length; i++) {
+         if (temp_fr[i].friend.uid === uid) {
+            temp_fr[i].friend.isChatBoxExpand = false;
+            context.setFriendOnChatBox(temp_fr);
+
+            break;
+         }
+      }
    }
 
-   function closeChatBox(msg_id: number) {
-      let temp_msg: TypeChatBox[] = [...context.message];
-      delete temp_msg[msg_id];
-      context.setMessage(temp_msg);
+   function closeChatBox(uid: string) {
+      let temp_fr: TypeFriend[] = [...context.friends];
+
+      for (let i = 0; i < temp_fr.length; i++) {
+         if (temp_fr[i].uid === uid) {
+            temp_fr[i].isOpenChatBox = false;
+            context.setFriends(temp_fr);
+
+            break;
+         }
+      }
    }
 
    return (
@@ -50,8 +65,7 @@ function ChatBox({ messages, isOnline, username, msg_id }: ChatBoxProps) {
                         className="rounded-full object-cover"
                         width={32}
                         height={32}
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPhrNSEV0zWuPANmqWiga-uWIMrYWBPeg3FLfo4XJz&s"
-                        // alt={`${name}'s avatar`}
+                        src={avatar}
                      />
 
                      {/* status */}
@@ -76,7 +90,7 @@ function ChatBox({ messages, isOnline, username, msg_id }: ChatBoxProps) {
                <TooltipButton describe="Thu nhỏ đoạn chat">
                   <button
                      className="rounded-full hover:bg-secondary"
-                     onClick={() => minimizeChatBox(msg_id)}
+                     onClick={() => minimizeChatBox(uid)}
                   >
                      <MinimizeIcon fill="#696b6f" />
                   </button>
@@ -86,7 +100,7 @@ function ChatBox({ messages, isOnline, username, msg_id }: ChatBoxProps) {
                <TooltipButton describe="Đóng đoạn chat">
                   <button
                      className="rounded-full hover:bg-secondary"
-                     onClick={() => closeChatBox(msg_id)}
+                     onClick={() => closeChatBox(uid)}
                   >
                      <CloseIcon fill="#bcc0c4" />
                   </button>

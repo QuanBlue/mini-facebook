@@ -1,6 +1,6 @@
 import Header from "@components/Header";
 import { useRouter } from "next/router";
-import ChatBoxController from "@components/ChatBoxController";
+import ChatBoxController from "@components/Chat/ChatBoxController";
 import React from "react";
 
 function Layout({ children }: React.PropsWithChildren<{}>) {

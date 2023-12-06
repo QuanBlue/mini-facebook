@@ -1,41 +1,50 @@
 import React, { useState } from "react";
-import avt from "@public/avt.jpg";
-import Image from "next/image";
 import { CloseIcon } from "@public/svg-icon";
-import {
-   TypeChatBox,
-   TypeMessage,
-   useChatBox,
-} from "@components/ChatBoxController/context";
+import { TypeFriend, TypeChat, TypeMessage, useChat } from "../../../context";
 
 interface MinimizeChatProps {
    last_msg?: TypeMessage;
    isOnline: boolean;
    username: string;
-   msg_id: number;
+   avatar: string;
+   uid: string;
 }
 
 function MinimizeChat({
    last_msg,
    isOnline,
    username,
-   msg_id,
+   avatar,
+   uid,
 }: MinimizeChatProps) {
    let [isHover, setIsHover] = useState(false);
 
-   const context = useChatBox();
+   const context = useChat();
 
-   function expandChatBox(msg_id: number) {
-      let temp_msg: TypeChatBox[] = [...context.message];
+   function expandChatBox(uid: string) {
+      let temp_fr: TypeChat[] = [...context.friendOnChatBox];
 
-      temp_msg[msg_id].isExpand = true;
-      context.setMessage(temp_msg);
+      for (let i = 0; i < temp_fr.length; i++) {
+         if (temp_fr[i].friend.uid === uid) {
+            temp_fr[i].friend.isChatBoxExpand = true;
+            context.setFriendOnChatBox(temp_fr);
+
+            break;
+         }
+      }
    }
 
-   function closeChatBox(msg_id: number) {
-      let temp_msg: TypeChatBox[] = [...context.message];
-      delete temp_msg[msg_id];
-      context.setMessage(temp_msg);
+   function closeChatBox(uid: string) {
+      let temp_fr: TypeFriend[] = [...context.friends];
+
+      for (let i = 0; i < temp_fr.length; i++) {
+         if (temp_fr[i].uid === uid) {
+            temp_fr[i].isOpenChatBox = false;
+            context.setFriends(temp_fr);
+
+            break;
+         }
+      }
    }
 
    return (
@@ -68,13 +77,13 @@ function MinimizeChat({
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
          >
-            <Image
-               src={avt}
+            <img
+               src={avatar}
                alt="avatar"
                width={48}
                height={48}
                className="rounded-full"
-               onClick={() => expandChatBox(msg_id)}
+               onClick={() => expandChatBox(uid)}
             />
 
             {/* online dot */}
@@ -86,7 +95,7 @@ function MinimizeChat({
             {isHover && (
                <button
                   className="absolute -right-1 -top-1  h-5 w-5 rounded-full  bg-gray p-0 shadow-modal hover:brightness-95"
-                  onClick={() => closeChatBox(msg_id)}
+                  onClick={() => closeChatBox(uid)}
                >
                   <div className="grid items-center justify-center">
                      <CloseIcon height={8} width={8} />

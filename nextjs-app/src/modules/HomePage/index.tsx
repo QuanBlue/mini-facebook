@@ -1,7 +1,8 @@
 import React from "react";
-import ChatSide from "@components/ChatSide";
+import ChatSide from "@components/Chat/ChatSide";
 import CreatePostForm from "@components/CreatePostForm";
 import Post from "@components/Post";
+import ChatProvider from "@components/Chat/context";
 
 function HomePage() {
    return (
@@ -18,7 +19,9 @@ function HomePage() {
          {/* chat side */}
          <div className="hidden laptop:flex laptop:w-chat-side">
             <div className="fixed right-0 ">
-               <ChatSide />
+               <ChatProvider>
+                  <ChatSide />
+               </ChatProvider>
             </div>
          </div>
       </div>
