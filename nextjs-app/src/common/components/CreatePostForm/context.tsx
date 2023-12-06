@@ -37,10 +37,6 @@ function CreatePostProvider({ children }: React.PropsWithChildren<{}>) {
       setIsChooseScope,
    };
 
-   useEffect(() => {
-      console.log("context", contextValue);
-   });
-
    return (
       <CreatePostContext.Provider value={contextValue}>
          {children}

@@ -28,10 +28,7 @@ function CreatePost() {
                      {/* post scope */}
                      <button
                         className="flex items-center gap-1 rounded-lg bg-secondary-btn px-2 py-1"
-                        onClick={() => {
-                           console.log("click");
-                           context?.setIsChooseScope(true);
-                        }}
+                        onClick={() => context?.setIsChooseScope(true)}
                      >
                         {context?.scope.icon}
                         <strong className="text-tiny">

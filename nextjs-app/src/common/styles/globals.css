@@ -36,6 +36,12 @@ body {
    font-family: "Roboto", sans-serif;
 }
 
+/* enable div have placeholder */
+[contentEditable="true"]:empty:not(:focus):before {
+   content: attr(placeholder);
+   color: var(--text-light-gray);
+}
+
 h1 {
    font-size: 20px;
 }

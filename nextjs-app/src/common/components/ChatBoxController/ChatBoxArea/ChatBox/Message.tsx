@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TypeMessage } from "../../index";
+import { TypeMessage } from "../../context";
 
 function Message({ time, content, isOwn }: TypeMessage) {
    let [isHover, setIsHover] = useState(false);
