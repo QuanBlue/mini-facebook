@@ -1,5 +1,5 @@
 import React from "react";
-import { useChat } from "../../context";
+import { useChat } from "../context";
 import ChatBox from "./ChatBox";
 import MinimizeChat from "./MinimizeChat";
 
@@ -9,28 +9,28 @@ function ChatBoxArea() {
    let minimize_chat_box: React.ReactNode[] = [];
    let expand_chat_box: React.ReactNode[] = [];
 
-   context.friendOnChatBox.map((f, index) => {
-      if (f.friend.isOpenChatBox) {
-         if (f.friend.isChatBoxExpand) {
+   context.openedChatBox.map((ocb, index) => {
+      if (index < context.numberChatBox + context.maxMinimizeChatBox) {
+         if (index < context.numberChatBox) {
             expand_chat_box.push(
                <ChatBox
                   key={index}
-                  uid={f.friend.uid}
-                  messages={f.messages}
-                  avatar={f.friend.avatar}
-                  isOnline={f.friend.isOnline}
-                  username={f.friend.name}
+                  uid={ocb.friend.uid}
+                  messages={ocb.messages}
+                  avatar={ocb.friend.avatar}
+                  isOnline={ocb.friend.isOnline}
+                  username={ocb.friend.name}
                />,
             );
          } else {
             minimize_chat_box.push(
                <MinimizeChat
                   key={index}
-                  uid={f.friend.uid}
-                  last_msg={f.messages.at(-1)}
-                  avatar={f.friend.avatar}
-                  isOnline={f.friend.isOnline}
-                  username={f.friend.name}
+                  uid={ocb.friend.uid}
+                  last_msg={ocb.messages.at(-1)}
+                  avatar={ocb.friend.avatar}
+                  isOnline={ocb.friend.isOnline}
+                  username={ocb.friend.name}
                />,
             );
          }
@@ -40,7 +40,7 @@ function ChatBoxArea() {
    return (
       <div className="flex flex-row-reverse">
          {/* Minimize chat box */}
-         <div className="z-50 mx-4 mb-3 flex flex-col justify-end gap-2">
+         <div className=" mx-4 mb-3 hidden flex-col justify-end gap-2 tablet:flex">
             {minimize_chat_box}
          </div>
 

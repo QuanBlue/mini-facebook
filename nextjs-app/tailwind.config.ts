@@ -82,6 +82,9 @@ const config: Config = {
 
             desktop: "1280px",
             // => @media (min-width: 1280px) { ... }
+
+            large_desktop: "1530px",
+            // => @media (min-width: 1530px) { ... }
          },
       },
    },

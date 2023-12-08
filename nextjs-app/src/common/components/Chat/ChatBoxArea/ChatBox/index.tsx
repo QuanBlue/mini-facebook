@@ -1,7 +1,7 @@
 import { CloseIcon, MinimizeIcon, SendMessageIcon } from "@public/svg-icon";
 import React from "react";
 import Message from "./Message";
-import { TypeFriend, TypeChat, TypeMessage, useChat } from "../../../context";
+import { TypeMessage, useChat, TypeOpenedChatBox } from "../../context";
 import TooltipButton from "@components/Button/TooltipButton";
 
 interface ChatBoxProps {
@@ -28,29 +28,48 @@ function ChatBox({ messages, isOnline, avatar, username, uid }: ChatBoxProps) {
    const context = useChat();
 
    function minimizeChatBox(uid: string) {
-      let temp_fr: TypeChat[] = [...context.friendOnChatBox];
+      let ocBox: TypeOpenedChatBox[] = [...context.openedChatBox];
 
-      for (let i = 0; i < temp_fr.length; i++) {
-         if (temp_fr[i].friend.uid === uid) {
-            temp_fr[i].friend.isChatBoxExpand = false;
-            context.setFriendOnChatBox(temp_fr);
+      // remove friend from opened chat box if it exists
+      const removeExistFriendInOCBox = () => {
+         let indexOfElementInOCBox = ocBox.findIndex(
+            (ocb) => ocb.friend.uid === uid,
+         );
 
-            break;
+         if (indexOfElementInOCBox !== -1) {
+            ocBox.splice(indexOfElementInOCBox, 1);
          }
-      }
+      };
+
+      // add friend to the top of opened chat box
+      const addFriendToBottomOCBox = () => {
+         let fr = context.friends.find((friend) => friend.uid === uid);
+
+         if (fr) {
+            ocBox.push({
+               friend: fr,
+               messages: [],
+            });
+         }
+      };
+
+      removeExistFriendInOCBox();
+      addFriendToBottomOCBox();
+      context.setOpenedChatBox(ocBox);
+      context.setNumberChatBox(context.numberChatBox - 1);
    }
 
    function closeChatBox(uid: string) {
-      let temp_fr: TypeFriend[] = [...context.friends];
+      let ocBox: TypeOpenedChatBox[] = [...context.openedChatBox];
 
-      for (let i = 0; i < temp_fr.length; i++) {
-         if (temp_fr[i].uid === uid) {
-            temp_fr[i].isOpenChatBox = false;
-            context.setFriends(temp_fr);
+      // remove friend from opened chat box if it exists
+      let indexOfElementInOCBox = ocBox.findIndex(
+         (ocb) => ocb.friend.uid === uid,
+      );
 
-            break;
-         }
-      }
+      ocBox.splice(indexOfElementInOCBox, 1);
+
+      context.setOpenedChatBox(ocBox);
    }
 
    return (

@@ -19,9 +19,7 @@ function HomePage() {
          {/* chat side */}
          <div className="hidden laptop:flex laptop:w-chat-side">
             <div className="fixed right-0 ">
-               <ChatProvider>
-                  <ChatSide />
-               </ChatProvider>
+               <ChatSide />
             </div>
          </div>
       </div>

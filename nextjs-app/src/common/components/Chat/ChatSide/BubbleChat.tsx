@@ -1,9 +1,53 @@
 import React from "react";
-import { TypeFriend } from "./index";
+import { TypeFriend, TypeOpenedChatBox, useChat } from "../context";
+import { get } from "http";
 
-function BubbleChat({ name, avatar, uid, isOnline }: TypeFriend) {
+interface BubbleChatProps {
+   name: string;
+   avatar: string;
+   uid: string;
+   isOnline: boolean;
+}
+
+function BubbleChat({ name, avatar, uid, isOnline }: BubbleChatProps) {
+   const context = useChat();
+
+   function openChatBox(uid: string) {
+      let ocBox: TypeOpenedChatBox[] = [...context.openedChatBox];
+
+      // remove friend from opened chat box if it exists
+      const removeExistFriend = () => {
+         let indexOfElementInOCBox = ocBox.findIndex(
+            (ocb) => ocb.friend.uid === uid,
+         );
+
+         if (indexOfElementInOCBox !== -1) {
+            ocBox.splice(indexOfElementInOCBox, 1);
+         }
+      };
+
+      // add friend to the top of opened chat box
+      const addFriendToTopOCBox = () => {
+         let fr = context.friends.find((friend) => friend.uid === uid);
+
+         if (fr) {
+            ocBox.unshift({
+               friend: fr,
+               messages: [],
+            });
+         }
+      };
+
+      removeExistFriend();
+      addFriendToTopOCBox();
+      context.setOpenedChatBox(ocBox);
+   }
+
    return (
-      <button className=" flex h-[44px] w-full items-center gap-2 rounded-lg ">
+      <button
+         className=" flex h-[44px] w-full items-center gap-2 rounded-lg "
+         onClick={() => openChatBox(uid)}
+      >
          {/* avatar */}
          <div className="relative">
             <img
