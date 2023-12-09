@@ -2,7 +2,7 @@ import { CloseIcon, MinimizeIcon, SendMessageIcon } from "@public/svg-icon";
 import React from "react";
 import Message from "./Message";
 import { TypeMessage, useChat, TypeOpenedChatBox } from "../../context";
-import TooltipButton from "@components/Button/TooltipButton";
+import Tooltip from "@components/Button/Tooltip";
 
 interface ChatBoxProps {
    messages: TypeMessage[];
@@ -106,24 +106,24 @@ function ChatBox({ messages, isOnline, avatar, username, uid }: ChatBoxProps) {
             {/* group button */}
             <div className="flex">
                {/* minimize btn */}
-               <TooltipButton describe="Thu nhỏ đoạn chat">
+               <Tooltip describe="Thu nhỏ đoạn chat">
                   <button
                      className="rounded-full hover:bg-secondary"
                      onClick={() => minimizeChatBox(uid)}
                   >
                      <MinimizeIcon fill="#696b6f" />
                   </button>
-               </TooltipButton>
+               </Tooltip>
 
                {/* close btn */}
-               <TooltipButton describe="Đóng đoạn chat">
+               <Tooltip describe="Đóng đoạn chat">
                   <button
                      className="rounded-full hover:bg-secondary"
                      onClick={() => closeChatBox(uid)}
                   >
                      <CloseIcon fill="#bcc0c4" />
                   </button>
-               </TooltipButton>
+               </Tooltip>
             </div>
          </div>
 

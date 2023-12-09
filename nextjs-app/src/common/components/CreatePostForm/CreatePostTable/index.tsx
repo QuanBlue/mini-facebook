@@ -37,7 +37,7 @@ export const scopes = [
 ];
 
 function CreatePostTable() {
-   const context = useCreatePostContext();
+   const createPostContext = useCreatePostContext();
    let [isModalOpen, setIsModalOpen] = useState(false);
 
    return (
@@ -46,13 +46,21 @@ function CreatePostTable() {
          {isModalOpen && (
             <Modal
                header_title={
-                  context?.isChooseScope
+                  createPostContext?.isChooseScope
                      ? "Đối tượng của bài viết"
                      : "Tạo bài viết"
                }
-               body={context?.isChooseScope ? <PostScope /> : <CreatePost />}
-               canBack={context?.isChooseScope}
-               clickBackAction={() => context?.setIsChooseScope(false)}
+               body={
+                  createPostContext?.isChooseScope ? (
+                     <PostScope />
+                  ) : (
+                     <CreatePost />
+                  )
+               }
+               canBack={createPostContext?.isChooseScope}
+               clickBackAction={() =>
+                  createPostContext?.setIsChooseScope(false)
+               }
                setIsModalOpen={setIsModalOpen}
             />
          )}

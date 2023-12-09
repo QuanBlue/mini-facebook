@@ -4,18 +4,20 @@ import fbLogo from "@public/facebook-logo.png";
 import avatar from "@public/avt.jpg";
 import {
    HomepageIcon,
-   CreateIcon,
+   PlusIcon,
    MessengerIcon,
    MessengerSolidIcon,
    FriendIcon,
    FriendSolidIcon,
    NotificationIcon,
    NotificationSolidIcon,
-   DownArrowSolidIcon,
    DownArrowIcon,
 } from "@public/svg-icon";
-import TooltipButton from "@components/Button/TooltipButton";
+import Tooltip from "@components/Button/Tooltip";
 import Link from "next/link";
+import DropDown from "@components/Button/DropDown";
+import MessengerBody from "./Messenger";
+import Create from "./Create";
 
 function Header() {
    return (
@@ -45,11 +47,11 @@ function Header() {
                <div className="grid grid-cols-3 items-end justify-center ">
                   <div />
 
-                  <TooltipButton describe="Trang chủ">
+                  <Tooltip describe="Trang chủ">
                      <button className="mb-[1px] w-full border-0 border-b-[3px] border-solid border-primary-icon hover:bg-transparent">
                         <HomepageIcon fill="var(--active-icon-color)" />
                      </button>
-                  </TooltipButton>
+                  </Tooltip>
 
                   <div />
                </div>
@@ -59,27 +61,47 @@ function Header() {
                <div className="flex flex-auto items-center justify-end">
                   <div className="notification grid w-[184px] grid-cols-4 gap-1">
                      {/* Creation */}
-                     <TooltipButton describe="Tạo">
-                        <button className="circle-btn">
-                           <CreateIcon />
-                        </button>
-                     </TooltipButton>
+                     <DropDown
+                        title="Tạo"
+                        tooltip="Tạo"
+                        btn_className="circle-btn"
+                        btn_icon={<PlusIcon />}
+                        btn_icon_active={
+                           <PlusIcon fill="var(--active-icon-color)" />
+                        }
+                        body={<Create />}
+                     />
 
                      {/* Messenger */}
-                     <TooltipButton describe="Messenger">
-                        <button className="circle-btn">
-                           <MessengerSolidIcon />
-                        </button>
-                     </TooltipButton>
+                     <DropDown
+                        title="Đoạn chat"
+                        tooltip="Messenger"
+                        btn_className="circle-btn"
+                        btn_icon={<MessengerSolidIcon />}
+                        btn_icon_active={
+                           <MessengerSolidIcon fill="var(--active-icon-color)" />
+                        }
+                        body={<MessengerBody />}
+                        footer={
+                           <a
+                              href="/chat"
+                              className="text-primary no-underline hover:underline"
+                           >
+                              <strong className="text-primary">
+                                 Xem tất cả trong Messenger
+                              </strong>
+                           </a>
+                        }
+                     />
 
                      {/* Announcement */}
-                     <TooltipButton describe="Thông báo">
+                     <Tooltip describe="Thông báo">
                         <button className="circle-btn">
                            <NotificationSolidIcon />
                         </button>
-                     </TooltipButton>
+                     </Tooltip>
 
-                     <TooltipButton describe="Tài khoản">
+                     <Tooltip describe="Tài khoản">
                         <button className="circle-btn relative">
                            <Image
                               src={avatar}
@@ -92,7 +114,7 @@ function Header() {
                               <DownArrowIcon height={8} width={8} />
                            </div>
                         </button>
-                     </TooltipButton>
+                     </Tooltip>
                   </div>
                </div>
                {/* End Notification  */}
@@ -101,13 +123,13 @@ function Header() {
 
             {/* > mobile responsive */}
             <div className="grid grid-cols-4 pb-4 pt-2 tablet:hidden">
-               <TooltipButton describe="Trang chủ">
+               <Tooltip describe="Trang chủ">
                   <button className="bg-transparent">
                      <HomepageIcon fill="var(--active-icon-color)" />
                   </button>
-               </TooltipButton>
+               </Tooltip>
 
-               <TooltipButton describe="Bạn bè">
+               <Tooltip describe="Bạn bè">
                   <button className="bg-transparent">
                      <div className="hidden tablet:block">
                         <FriendSolidIcon />
@@ -117,10 +139,10 @@ function Header() {
                         <FriendIcon />
                      </div>
                   </button>
-               </TooltipButton>
+               </Tooltip>
 
                {/* Messenger */}
-               <TooltipButton describe="Messenger">
+               <Tooltip describe="Messenger">
                   <button className="bg-transparent">
                      <div className="hidden tablet:block">
                         <MessengerSolidIcon />
@@ -130,10 +152,10 @@ function Header() {
                         <MessengerIcon />
                      </div>
                   </button>
-               </TooltipButton>
+               </Tooltip>
 
                {/* Announcement */}
-               <TooltipButton describe="Thông báo">
+               <Tooltip describe="Thông báo">
                   <button className="bg-transparent">
                      <div className="hidden tablet:block">
                         <NotificationSolidIcon />
@@ -143,7 +165,7 @@ function Header() {
                         <NotificationIcon />
                      </div>
                   </button>
-               </TooltipButton>
+               </Tooltip>
             </div>
             {/* end mobile responsive */}
          </div>

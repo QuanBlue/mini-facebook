@@ -33,9 +33,9 @@ export const scopes = [
 
 function CreatePostForm() {
    return (
-      <CreatePostProvider>
-         <CreatePostTable />
-      </CreatePostProvider>
+      // <CreatePostProvider>
+      <CreatePostTable />
+      // </CreatePostProvider>
    );
 }
 

@@ -182,8 +182,8 @@ export function CloseIcon({
    );
 }
 
-// Create Icon
-export function CreateIcon({
+// Plus Icon
+export function PlusIcon({
    height = 20,
    width = 20,
    fill = "var(--inactive-icon-color)",
@@ -197,6 +197,32 @@ export function CreateIcon({
          fill={fill}
       >
          <path d="M11 19a1 1 0 1 0 2 0v-6h6a1 1 0 1 0 0-2h-6V5a1 1 0 1 0-2 0v6H5a1 1 0 1 0 0 2h6v6z"></path>
+      </svg>
+   );
+}
+
+// Create Icon
+export function CreateIcon({
+   height = 24,
+   width = 24,
+   fill = "var(--text-dark-gray)",
+}: Props) {
+   return (
+      <svg
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 256 256"
+         width={width}
+         height={height}
+         fill={fill}
+      >
+         <g>
+            <g>
+               <path
+                  fill="#000000"
+                  d="M203.4,202.1c0,8.2-6.6,14.9-14.9,14.9H54.6c-8.2,0-14.9-6.6-14.9-14.9V68.2c0-8.2,6.7-14.9,14.9-14.9h89.3V23.5H39.8C23.3,23.5,10,36.9,10,53.3v163.7c0,16.4,13.3,29.8,29.8,29.8h163.7c16.4,0,29.8-13.3,29.8-29.8V112.8h-29.8V202.1z M68.1,187.2l31.5-10.5L215.4,60.9l-21-21L78.6,155.6L68.1,187.2z M243.8,22l-10.5-10.5c-2.9-2.9-7.6-2.9-10.5,0l-8.1,8.2l0,0l-9.8,9.8l21,21l2.2-2.1l15.8-15.8C246.7,29.6,246.7,24.9,243.8,22z"
+               />
+            </g>
+         </g>
       </svg>
    );
 }

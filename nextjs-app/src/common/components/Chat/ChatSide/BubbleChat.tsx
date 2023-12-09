@@ -1,6 +1,5 @@
 import React from "react";
-import { TypeFriend, TypeOpenedChatBox, useChat } from "../context";
-import { get } from "http";
+import { TypeOpenedChatBox, useChat } from "../context";
 
 interface BubbleChatProps {
    name: string;
@@ -16,7 +15,7 @@ function BubbleChat({ name, avatar, uid, isOnline }: BubbleChatProps) {
       let ocBox: TypeOpenedChatBox[] = [...context.openedChatBox];
 
       // remove friend from opened chat box if it exists
-      const removeExistFriend = () => {
+      const removeExistFriendInOCBox = () => {
          let indexOfElementInOCBox = ocBox.findIndex(
             (ocb) => ocb.friend.uid === uid,
          );
@@ -38,7 +37,7 @@ function BubbleChat({ name, avatar, uid, isOnline }: BubbleChatProps) {
          }
       };
 
-      removeExistFriend();
+      removeExistFriendInOCBox();
       addFriendToTopOCBox();
       context.setOpenedChatBox(ocBox);
    }

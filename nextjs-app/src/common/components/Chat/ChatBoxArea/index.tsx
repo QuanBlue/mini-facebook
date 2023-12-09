@@ -40,7 +40,7 @@ function ChatBoxArea() {
    return (
       <div className="flex flex-row-reverse">
          {/* Minimize chat box */}
-         <div className=" mx-4 mb-3 hidden flex-col justify-end gap-2 tablet:flex">
+         <div className="z-50 mx-4 mb-3 hidden w-[48px] flex-col justify-end gap-2 tablet:flex">
             {minimize_chat_box}
          </div>
 

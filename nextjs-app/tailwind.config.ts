@@ -40,15 +40,21 @@ const config: Config = {
          width: {
             login: "315px",
             "chat-side": "248px",
+            "dropdown-menu": "350px",
             "chat-box": "330px",
             "personal-page-left-side": "360px",
             "personal-page-right-side": "500px",
             "personal-page-side": "700px",
          },
 
+         maxHeight: {
+            "dropdown-menu": "540px",
+         },
+
          fontSize: {
             tiny: "12px",
             regular: "16px",
+            "regular-big": "20px",
             big: "24px",
             huge: "32px",
 
