@@ -1,6 +1,11 @@
-import { TypeFriend, TypeMessage } from "@components/Chat/context";
 import React from "react";
-import { useChat, TypeOpenedChatBox } from "@components/Chat/context";
+import {
+   useChat,
+   TypeOpenedChatBox,
+   TypeFriend,
+   TypeMessage,
+} from "@components/Chat/context";
+import { useDropDown } from "@components/Button/DropDown/context";
 
 interface MessengerProps {
    friend: TypeFriend;
@@ -8,10 +13,11 @@ interface MessengerProps {
 }
 
 function Messenger({ friend, last_msg }: MessengerProps) {
-   const context = useChat();
+   const chatContext = useChat();
+   const dropDownContext = useDropDown();
 
    function expandChatBox(uid: string) {
-      let ocBox: TypeOpenedChatBox[] = [...context.openedChatBox];
+      let ocBox: TypeOpenedChatBox[] = [...chatContext.openedChatBox];
 
       // remove friend from opened chat box if it exists
       const removeExistFriendInOCBox = () => {
@@ -26,7 +32,7 @@ function Messenger({ friend, last_msg }: MessengerProps) {
 
       // add friend to the top of opened chat box
       const addFriendToTopOCBox = () => {
-         let fr = context.friends.find((friend) => friend.uid === uid);
+         let fr = chatContext.friends.find((friend) => friend.uid === uid);
 
          if (fr) {
             ocBox.unshift({
@@ -38,9 +44,12 @@ function Messenger({ friend, last_msg }: MessengerProps) {
 
       removeExistFriendInOCBox();
       addFriendToTopOCBox();
-      context.setOpenedChatBox(ocBox);
-      if (context.numberChatBox < context.maxExpandChatBox) {
-         context.setNumberChatBox(context.numberChatBox + 1);
+
+      chatContext.setOpenedChatBox(ocBox);
+      dropDownContext?.setIsOpen(false);
+
+      if (chatContext.numberChatBox < chatContext.maxExpandChatBox) {
+         chatContext.setNumberChatBox(chatContext.numberChatBox + 1);
       }
    }
 

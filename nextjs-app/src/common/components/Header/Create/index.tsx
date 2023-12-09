@@ -1,33 +1,52 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useCreatePostContext } from "@components/CreatePostForm/context";
 import { CreateIcon } from "@public/svg-icon";
 import PostScope from "@components/CreatePostForm/CreatePostTable/PostScope";
 import CreatePost from "@components/CreatePostForm/CreatePostTable/CreatePost";
 import Modal from "@components/Modal";
+import { useDropDown } from "@components/Button/DropDown/context";
 
 function Create() {
    let [isModalOpen, setIsModalOpen] = useState(false);
    const context = useCreatePostContext();
+   const dropDownContext = useDropDown();
+
+   useEffect(() => {
+      if (isModalOpen && dropDownContext?.setIsAutoClose) {
+         dropDownContext.setIsAutoClose(false);
+      } else if (
+         !isModalOpen &&
+         dropDownContext.isOpen &&
+         !dropDownContext.isAutoClose
+      ) {
+         dropDownContext.setIsOpen(false);
+
+         if (dropDownContext?.setIsAutoClose)
+            dropDownContext.setIsAutoClose(true);
+      }
+   }, [isModalOpen]);
 
    return (
-      <button
-         className="flex w-full items-center gap-3 rounded-xl hover:bg-secondary"
-         onClick={() => setIsModalOpen(!isModalOpen)}
-      >
-         {/* icon */}
-         <div className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary-btn">
-            <CreateIcon fill="#000" height={18} width={18} />
-         </div>
-
-         {/* content */}
-         <div className="grid content-normal gap-1">
-            <p className="text-left">Đăng</p>
-            <div className=" overflow-hidden">
-               <p className="truncate text-tiny text-gray-txt">
-                  Chia sẻ bài viết trên Bảng tin.
-               </p>
+      <div>
+         <button
+            className="flex w-full items-center gap-3 rounded-xl hover:bg-secondary"
+            onClick={() => setIsModalOpen(true)}
+         >
+            {/* icon */}
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary-btn">
+               <CreateIcon fill="#000" height={18} width={18} />
             </div>
-         </div>
+
+            {/* content */}
+            <div className="grid content-normal gap-1">
+               <p className="text-left">Đăng</p>
+               <div className=" overflow-hidden">
+                  <p className="truncate text-tiny text-gray-txt">
+                     Chia sẻ bài viết trên Bảng tin.
+                  </p>
+               </div>
+            </div>
+         </button>
 
          {/* modal */}
          {isModalOpen && (
@@ -42,8 +61,9 @@ function Create() {
                clickBackAction={() => context?.setIsChooseScope(false)}
                setIsModalOpen={setIsModalOpen}
             />
+            // <>dawd</>
          )}
-      </button>
+      </div>
    );
 }
 

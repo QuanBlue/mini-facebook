@@ -18,6 +18,7 @@ import Link from "next/link";
 import DropDown from "@components/Button/DropDown";
 import MessengerBody from "./Messenger";
 import Create from "./Create";
+import Setting from "./Setting";
 
 function Header() {
    return (
@@ -35,7 +36,7 @@ function Header() {
 
                   {/* mobile */}
                   <div className="block tablet:hidden">
-                     <h1 className="text-huge text-primary">mini_facebook</h1>
+                     <h1 className="text-huge text-primary">mini facebook</h1>
                   </div>
                </button>
             </div>
@@ -59,7 +60,7 @@ function Header() {
 
                {/* Setting and Control account  */}
                <div className="flex flex-auto items-center justify-end">
-                  <div className="notification grid w-[184px] grid-cols-4 gap-1">
+                  <div className="notification grid w-[138px] grid-cols-3 gap-1">
                      {/* Creation */}
                      <DropDown
                         title="Tạo"
@@ -94,27 +95,25 @@ function Header() {
                         }
                      />
 
-                     {/* Announcement */}
-                     <Tooltip describe="Thông báo">
-                        <button className="circle-btn">
-                           <NotificationSolidIcon />
-                        </button>
-                     </Tooltip>
+                     <DropDown
+                        tooltip="Tài khoản"
+                        btn_className="circle-btn p-0"
+                        btn_icon={
+                           <div className="circle-btn relative">
+                              <Image
+                                 src={avatar}
+                                 layout="fill"
+                                 alt="avatar logo"
+                                 className="rounded-full "
+                              />
 
-                     <Tooltip describe="Tài khoản">
-                        <button className="circle-btn relative">
-                           <Image
-                              src={avatar}
-                              layout="fill"
-                              alt="avatar logo"
-                              className="rounded-full"
-                           />
-
-                           <div className="absolute -right-1 bottom-0 flex h-4 w-4 items-center justify-center rounded-full bg-secondary-btn">
-                              <DownArrowIcon height={8} width={8} />
+                              <div className="absolute -right-1 bottom-0 flex h-4 w-4 items-center justify-center rounded-full bg-secondary-btn">
+                                 <DownArrowIcon height={8} width={8} />
+                              </div>
                            </div>
-                        </button>
-                     </Tooltip>
+                        }
+                        body={<Setting />}
+                     />
                   </div>
                </div>
                {/* End Notification  */}
@@ -122,7 +121,7 @@ function Header() {
             {/* end tablet responsive */}
 
             {/* > mobile responsive */}
-            <div className="grid grid-cols-4 pb-4 pt-2 tablet:hidden">
+            <div className="grid grid-cols-3 pb-4 pt-2 tablet:hidden">
                <Tooltip describe="Trang chủ">
                   <button className="bg-transparent">
                      <HomepageIcon fill="var(--active-icon-color)" />
@@ -131,39 +130,14 @@ function Header() {
 
                <Tooltip describe="Bạn bè">
                   <button className="bg-transparent">
-                     <div className="hidden tablet:block">
-                        <FriendSolidIcon />
-                     </div>
-
-                     <div className="block tablet:hidden">
-                        <FriendIcon />
-                     </div>
+                     <FriendSolidIcon />
                   </button>
                </Tooltip>
 
                {/* Messenger */}
                <Tooltip describe="Messenger">
                   <button className="bg-transparent">
-                     <div className="hidden tablet:block">
-                        <MessengerSolidIcon />
-                     </div>
-
-                     <div className="block tablet:hidden">
-                        <MessengerIcon />
-                     </div>
-                  </button>
-               </Tooltip>
-
-               {/* Announcement */}
-               <Tooltip describe="Thông báo">
-                  <button className="bg-transparent">
-                     <div className="hidden tablet:block">
-                        <NotificationSolidIcon />
-                     </div>
-
-                     <div className="block tablet:hidden">
-                        <NotificationIcon />
-                     </div>
+                     <MessengerSolidIcon />
                   </button>
                </Tooltip>
             </div>

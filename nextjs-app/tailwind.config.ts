@@ -53,6 +53,7 @@ const config: Config = {
 
          fontSize: {
             tiny: "12px",
+            small: "14px",
             regular: "16px",
             "regular-big": "20px",
             big: "24px",
@@ -77,6 +78,7 @@ const config: Config = {
             modal: "0px 5px 15px rgba(0, 0, 0, 0.35)",
             pre_message: "0px 5px 15px rgba(0, 0, 0, 0.5)",
             inner: "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset",
+            around: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
          },
 
          screens: {
