@@ -44,7 +44,7 @@ function Post() {
             </div>
 
             <div>
-               <p className="text-regular">
+               <p className="text-small">
                   Tròi oi năm 2024 rồi đừng có dùng mấy khay để bánh kẹo truyền
                   thống nữaaa Tết gòi sắm mới đi mấy keo ơi có 49 cành hoyyy
                </p>

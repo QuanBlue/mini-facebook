@@ -1,7 +1,7 @@
 import React from "react";
 import ScopeBadge from "./ScopeBadge";
-import { scopes } from "../../index";
-import { useCreatePostContext } from "../../context";
+import { scopes } from "../context";
+import { useCreatePostContext } from "../context";
 
 function PostScope() {
    const context = useCreatePostContext();

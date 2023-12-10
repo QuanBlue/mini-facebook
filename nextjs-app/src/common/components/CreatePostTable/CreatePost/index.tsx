@@ -3,7 +3,7 @@ import Image from "next/image";
 import { DownArrowSolidIcon } from "@public/svg-icon";
 import avt from "@public/avt.jpg";
 import pictureIcon from "@public/picture.png";
-import { useCreatePostContext } from "../../context";
+import { useCreatePostContext } from "../context";
 
 function CreatePost() {
    const context = useCreatePostContext();

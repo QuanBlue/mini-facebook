@@ -1,5 +1,33 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
-import { scopes, TypeScope } from "./index";
+import { FriendSolidIcon, PrivateIcon, PublicIcon } from "@public/svg-icon";
+
+export interface TypeScope {
+   title: string;
+   id: string;
+   description?: string;
+   icon: React.ReactNode;
+}
+
+export const scopes = [
+   {
+      title: "Công khai",
+      id: "public",
+      description: "Bất kỳ ai ở trên hoặc ngoài Facebook",
+      icon: <PublicIcon fill="#000000" width={12} height={12} />,
+   },
+   {
+      title: "Bạn bè",
+      id: "friend",
+      description: "Bạn bè của bạn trên Facebook",
+      icon: <FriendSolidIcon fill="#000000" width={12} height={12} />,
+   },
+   {
+      title: "Chỉ mình tôi",
+      id: "private",
+      description: "",
+      icon: <PrivateIcon fill="#000000" width={12} height={12} />,
+   },
+];
 
 export interface CreatePostContextProps {
    scope: TypeScope;

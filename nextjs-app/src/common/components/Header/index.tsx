@@ -5,19 +5,16 @@ import avatar from "@public/avt.jpg";
 import {
    HomepageIcon,
    PlusIcon,
-   MessengerIcon,
    MessengerSolidIcon,
-   FriendIcon,
+   MessengerIcon,
    FriendSolidIcon,
-   NotificationIcon,
-   NotificationSolidIcon,
    DownArrowIcon,
 } from "@public/svg-icon";
 import Tooltip from "@components/Button/Tooltip";
 import Link from "next/link";
 import DropDown from "@components/Button/DropDown";
 import MessengerBody from "./Messenger";
-import Create from "./Create";
+import Creation from "./Creation";
 import Setting from "./Setting";
 
 function Header() {
@@ -70,7 +67,7 @@ function Header() {
                         btn_icon_active={
                            <PlusIcon fill="var(--active-icon-color)" />
                         }
-                        body={<Create />}
+                        body={<Creation />}
                      />
 
                      {/* Messenger */}
@@ -137,7 +134,7 @@ function Header() {
                {/* Messenger */}
                <Tooltip describe="Messenger">
                   <button className="bg-transparent">
-                     <MessengerSolidIcon />
+                     <MessengerIcon />
                   </button>
                </Tooltip>
             </div>

@@ -78,7 +78,7 @@ function MinimizeChat({
                      <div className="absolute -top-1 left-0 grid w-[230px] gap-1 rounded-[8px] bg-white p-3 shadow-pre_message">
                         <strong className="">{username}</strong>
 
-                        <div className=" overflow-hidden">
+                        <div className="overflow-hidden">
                            <p className="truncate text-gray-txt">
                               {last_msg?.isOwn ? "Bạn: " : ""}
                               {last_msg?.content}

@@ -42,6 +42,7 @@ const config: Config = {
             "chat-side": "248px",
             "dropdown-menu": "350px",
             "chat-box": "330px",
+            "friend-page-nav-bar": "360px",
             "personal-page-left-side": "360px",
             "personal-page-right-side": "500px",
             "personal-page-side": "700px",
@@ -91,7 +92,7 @@ const config: Config = {
             desktop: "1280px",
             // => @media (min-width: 1280px) { ... }
 
-            large_desktop: "1530px",
+            "large-desktop": "1530px",
             // => @media (min-width: 1530px) { ... }
          },
       },

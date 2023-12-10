@@ -157,6 +157,114 @@ function ChatProvider({ children }: React.PropsWithChildren<{}>) {
          // isOpenChatBox: false,
          // isChatBoxExpand: true,
       },
+      {
+         name: "Lương Kiếm Minh",
+         avatar:
+            "https://scontent.fsgn8-4.fna.fbcdn.net/v/t1.18169-1/11182066_1414111905576576_6344189983619205513_n.jpg?stp=c54.0.177.177a_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=2b6aad&_nc_eui2=AeFRlkf3ThJ-bplQVUl91Ss41FErWQ6Kp2LUUStZDoqnYvCD8pw7nczpNNgooCWcm2BNgRx-1Vs9A_FyYiOnrVk2&_nc_ohc=wSWH5mrjbxoAX8yg6YL&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfAbr3ch5tJBIC2tBrnTIK2NG_VrqfSP66nkijF84avg7Q&oe=659111BF",
+         uid: "3",
+         isOnline: true,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Ngọc Liên",
+         avatar:
+            "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg",
+         uid: "4",
+         isOnline: true,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Trần Minh Thức",
+         avatar:
+            "https://media.istockphoto.com/id/886636648/photo/young-man-is-taking-pictures-with-an-old-camera.jpg?s=612x612&w=0&k=20&c=xhNzBup3llLNBJjj4wU6kO8gmK8xiXIbxKX6cpveUhI=",
+         uid: "1",
+         isOnline: true,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Anh Ngo",
+         avatar:
+            "https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-1/404990361_1663767724033114_7602431839291799030_n.jpg?stp=c0.0.200.200a_dst-jpg_p200x200&_nc_cat=111&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeGMrB5OH74nw8lqEfqnXlzCxvFFkGpJHcTG8UWQakkdxEpp0pmvj1ow1vELAVtjJVnh68I_AD5nCogzHc7iwRTw&_nc_ohc=t0W2lu_K-KQAX_vLbDq&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfDwRVs_hXP7coVTUzkQB1pnWU13P1i3Z9eNF052xUcrzw&oe=656DE567",
+         uid: "2",
+         isOnline: false,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Lương Kiếm Minh",
+         avatar:
+            "https://scontent.fsgn8-4.fna.fbcdn.net/v/t1.18169-1/11182066_1414111905576576_6344189983619205513_n.jpg?stp=c54.0.177.177a_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=2b6aad&_nc_eui2=AeFRlkf3ThJ-bplQVUl91Ss41FErWQ6Kp2LUUStZDoqnYvCD8pw7nczpNNgooCWcm2BNgRx-1Vs9A_FyYiOnrVk2&_nc_ohc=wSWH5mrjbxoAX8yg6YL&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfAbr3ch5tJBIC2tBrnTIK2NG_VrqfSP66nkijF84avg7Q&oe=659111BF",
+         uid: "3",
+         isOnline: true,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Ngọc Liên",
+         avatar:
+            "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg",
+         uid: "4",
+         isOnline: true,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Lương Kiếm Minh",
+         avatar:
+            "https://scontent.fsgn8-4.fna.fbcdn.net/v/t1.18169-1/11182066_1414111905576576_6344189983619205513_n.jpg?stp=c54.0.177.177a_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=2b6aad&_nc_eui2=AeFRlkf3ThJ-bplQVUl91Ss41FErWQ6Kp2LUUStZDoqnYvCD8pw7nczpNNgooCWcm2BNgRx-1Vs9A_FyYiOnrVk2&_nc_ohc=wSWH5mrjbxoAX8yg6YL&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfAbr3ch5tJBIC2tBrnTIK2NG_VrqfSP66nkijF84avg7Q&oe=659111BF",
+         uid: "3",
+         isOnline: true,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Ngọc Liên",
+         avatar:
+            "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg",
+         uid: "4",
+         isOnline: true,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Trần Minh Thức",
+         avatar:
+            "https://media.istockphoto.com/id/886636648/photo/young-man-is-taking-pictures-with-an-old-camera.jpg?s=612x612&w=0&k=20&c=xhNzBup3llLNBJjj4wU6kO8gmK8xiXIbxKX6cpveUhI=",
+         uid: "1",
+         isOnline: true,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Anh Ngo",
+         avatar:
+            "https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-1/404990361_1663767724033114_7602431839291799030_n.jpg?stp=c0.0.200.200a_dst-jpg_p200x200&_nc_cat=111&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeGMrB5OH74nw8lqEfqnXlzCxvFFkGpJHcTG8UWQakkdxEpp0pmvj1ow1vELAVtjJVnh68I_AD5nCogzHc7iwRTw&_nc_ohc=t0W2lu_K-KQAX_vLbDq&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfDwRVs_hXP7coVTUzkQB1pnWU13P1i3Z9eNF052xUcrzw&oe=656DE567",
+         uid: "2",
+         isOnline: false,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Lương Kiếm Minh",
+         avatar:
+            "https://scontent.fsgn8-4.fna.fbcdn.net/v/t1.18169-1/11182066_1414111905576576_6344189983619205513_n.jpg?stp=c54.0.177.177a_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=2b6aad&_nc_eui2=AeFRlkf3ThJ-bplQVUl91Ss41FErWQ6Kp2LUUStZDoqnYvCD8pw7nczpNNgooCWcm2BNgRx-1Vs9A_FyYiOnrVk2&_nc_ohc=wSWH5mrjbxoAX8yg6YL&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfAbr3ch5tJBIC2tBrnTIK2NG_VrqfSP66nkijF84avg7Q&oe=659111BF",
+         uid: "3",
+         isOnline: true,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
+      {
+         name: "Ngọc Liên",
+         avatar:
+            "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg",
+         uid: "4",
+         isOnline: true,
+         // isOpenChatBox: false,
+         // isChatBoxExpand: true,
+      },
    ]);
    let [openedChatBox, setOpenedChatBox] = useState<TypeOpenedChatBox[]>([]);
    let [numberChatBox, setNumberChatBox] = useState<number>(3);

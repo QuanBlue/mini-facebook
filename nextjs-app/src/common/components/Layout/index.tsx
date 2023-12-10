@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import ChatBoxArea from "@components/Chat/ChatBoxArea";
 import React from "react";
 import ChatProvider from "@components/Chat/context";
-import CreatePostProvider from "@components/CreatePostForm/context";
+import CreatePostProvider from "@components/CreatePostTable/context";
 
 function Layout({ children }: React.PropsWithChildren<{}>) {
    const router = useRouter();

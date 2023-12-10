@@ -4,7 +4,7 @@ import { CameraIcon } from "@public/svg-icon";
 import QuickFriend from "./QuickFriend";
 import Post from "@components/Post";
 import avt from "@public/avt.jpg";
-import CreatePostForm from "@components/CreatePostForm";
+import CreatePostTable from "@components/CreatePostTable";
 
 function PersonalPage() {
    return (
@@ -190,7 +190,7 @@ function PersonalPage() {
             {/* right side */}
             <div className="w-personal-page-side laptop:w-personal-page-right-side">
                <div className="grid gap-4">
-                  <CreatePostForm />
+                  <CreatePostTable />
                   <Post />
                   <Post />
                   <Post />

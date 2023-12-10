@@ -1,6 +1,6 @@
 import React from "react";
 import { TypeScope } from "../../index";
-import { useCreatePostContext } from "../../context";
+import { useCreatePostContext } from "../context";
 
 interface ScopeProps {
    props: TypeScope;

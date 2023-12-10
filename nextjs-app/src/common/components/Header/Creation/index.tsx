@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useCreatePostContext } from "@components/CreatePostForm/context";
+import { useCreatePostContext } from "@components/CreatePostTable/context";
 import { CreateIcon } from "@public/svg-icon";
-import PostScope from "@components/CreatePostForm/CreatePostTable/PostScope";
-import CreatePost from "@components/CreatePostForm/CreatePostTable/CreatePost";
+import PostScope from "@components/CreatePostTable/PostScope";
+import CreatePost from "@components/CreatePostTable/CreatePost";
 import Modal from "@components/Modal";
 import { useDropDown } from "@components/Button/DropDown/context";
 
-function Create() {
+function Creation() {
    let [isModalOpen, setIsModalOpen] = useState(false);
    const context = useCreatePostContext();
    const dropDownContext = useDropDown();
@@ -67,4 +67,4 @@ function Create() {
    );
 }
 
-export default Create;
+export default Creation;

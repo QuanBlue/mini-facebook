@@ -5,7 +5,7 @@ import pictureIcon from "@public/picture.png";
 import Modal from "@components/Modal";
 import CreatePost from "./CreatePost";
 import PostScope from "./PostScope";
-import { useCreatePostContext } from "../context";
+import { useCreatePostContext } from "./context";
 import { FriendSolidIcon, PrivateIcon, PublicIcon } from "@public/svg-icon";
 
 export interface TypeScope {
