@@ -13,6 +13,8 @@ function HomePage() {
                <CreatePostTable />
                <Post />
                <Post />
+               <Post />
+               <Post />
             </div>
          </div>
 

@@ -3,14 +3,15 @@ import React, { useState } from "react";
 interface Props {
    describe?: string;
    children: React.ReactNode;
+   className?: string;
 }
 
-function Tooltip({ describe, children }: Props) {
+function Tooltip({ className, describe, children }: Props) {
    const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
    return (
       <div
-         className="relative z-50 flex justify-center"
+         className={`${className} relative z-50 flex h-full items-center justify-center`}
          onMouseEnter={() => setIsTooltipVisible(true)}
          onMouseLeave={() => setIsTooltipVisible(false)}
       >

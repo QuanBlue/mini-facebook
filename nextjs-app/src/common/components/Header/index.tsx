@@ -9,6 +9,8 @@ import {
    MessengerIcon,
    FriendSolidIcon,
    DownArrowIcon,
+   HomepageSolidIcon,
+   FriendIcon,
 } from "@public/svg-icon";
 import Tooltip from "@components/Button/Tooltip";
 import Link from "next/link";
@@ -16,13 +18,69 @@ import DropDown from "@components/Button/DropDown";
 import MessengerBody from "./Messenger";
 import Creation from "./Creation";
 import Setting from "./Setting";
+import { useRouter } from "next/router";
+
+const nav_button = [
+   {
+      name: "Trang chủ",
+      active_icon: (
+         <HomepageSolidIcon
+            width={24}
+            height={24}
+            fill="var(--active-icon-color)"
+         />
+      ),
+      inactive_icon: (
+         <HomepageIcon width={24} height={24} fill="var(--text-gray)" />
+      ),
+      link: "/",
+   },
+   {
+      name: "Bạn bè",
+      active_icon: (
+         <FriendSolidIcon
+            width={24}
+            height={24}
+            fill="var(--active-icon-color)"
+         />
+      ),
+      inactive_icon: (
+         <FriendIcon width={24} height={24} fill="var(--text-gray)" />
+      ),
+      link: "/friends",
+   },
+];
 
 function Header() {
+   const router = useRouter();
+
+   let nav_button_elements = nav_button.map((item, index) => {
+      return router.pathname === item.link ? (
+         // active button
+         <Link
+            href={item.link}
+            className="-mb-[3px] flex h-full w-[80px] items-center justify-center border-0 border-b-[3px] border-solid border-primary-icon hover:bg-transparent"
+         >
+            <Tooltip describe={item.name}>{item.active_icon}</Tooltip>
+         </Link>
+      ) : (
+         // inactive button
+         <div className="flex h-full items-center justify-center">
+            <Link
+               href={item.link}
+               className="h-5/6 w-[80px] rounded-lg hover:bg-secondary"
+            >
+               <Tooltip describe={item.name}>{item.inactive_icon}</Tooltip>
+            </Link>
+         </div>
+      );
+   });
+
    return (
       <div className="fixed top-0 z-50 w-full bg-white shadow-md">
          <div className="flex flex-col px-4 tablet:flex-row">
             {/* Facebook logo */}
-            <div className="flex flex-auto items-center justify-start">
+            <div className="flex items-center justify-start">
                <button className="hover:bg-transparent">
                   {/* > tablet */}
                   <div className="hidden tablet:block">
@@ -42,16 +100,8 @@ function Header() {
             {/* Feature  */}
             {/* > tablet responsive */}
             <div className="hidden flex-auto tablet:flex">
-               <div className="grid grid-cols-3 items-end justify-center ">
-                  <div />
-
-                  <Tooltip describe="Trang chủ">
-                     <button className="mb-[1px] w-full border-0 border-b-[3px] border-solid border-primary-icon hover:bg-transparent">
-                        <HomepageIcon fill="var(--active-icon-color)" />
-                     </button>
-                  </Tooltip>
-
-                  <div />
+               <div className="flex w-full items-end justify-center gap-2">
+                  {nav_button_elements}
                </div>
                {/* End Feature  */}
 

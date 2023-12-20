@@ -1,15 +1,19 @@
 import React from "react";
-import NavBar from "./NavBar";
+import NavBar from "./NavBar/";
 import ViewSide from "./ViewSide/";
 
 function Friend() {
    return (
-      <div className="flex">
+      <div className="flex flex-row-reverse">
          {/* nav side */}
-         <NavBar />
+         <div className="fixed left-0">
+            <NavBar />
+         </div>
 
          {/* content */}
-         <ViewSide />
+         <div className="w-[calc(100vw-360px)]">
+            <ViewSide />
+         </div>
       </div>
    );
 }
