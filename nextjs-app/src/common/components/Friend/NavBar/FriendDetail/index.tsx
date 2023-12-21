@@ -22,11 +22,14 @@ function FriendDetail() {
    return (
       <div className="">
          {/* header */}
-         <div className="m-5  grid gap-3 border-0 border-b border-solid border-hover-btn pb-3">
+         <div className="z-50 m-5 grid gap-3 border-0 border-b border-solid border-hover-btn pb-3">
             <div className="flex items-center gap-5">
                <button
                   className="rounded-full"
-                  onClick={() => friendContext.setQuery("home")}
+                  onClick={() => {
+                     friendContext.setQuery("home");
+                     friendContext.setViewFriend(null);
+                  }}
                >
                   <LeftArrowIcon />
                </button>

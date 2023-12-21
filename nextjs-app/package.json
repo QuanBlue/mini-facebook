@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@tailwindcss/container-queries": "^0.1.1",
 		"mini-css-extract-plugin": "^2.7.6",
 		"next": "14.0.3",
 		"react": "^18",
@@ -22,7 +23,7 @@
 		"postcss": "^8",
 		"prettier": "^3.1.0",
 		"prettier-plugin-tailwindcss": "^0.5.7",
-		"tailwindcss": "^3.3.5",
+		"tailwindcss": "^3.4.0",
 		"typescript": "^5"
 	}
 }

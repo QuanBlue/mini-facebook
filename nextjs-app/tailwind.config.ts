@@ -1,6 +1,7 @@
 // watch css var in @styles/globals
 
 import type { Config } from "tailwindcss";
+import containerPlugin from "@tailwindcss/container-queries";
 
 const config: Config = {
    content: [
@@ -45,6 +46,9 @@ const config: Config = {
             "friend-page-nav-bar": "360px",
             "personal-page-left-side": "360px",
             "personal-page-right-side": "500px",
+         },
+
+         maxWidth: {
             "personal-page-side": "700px",
          },
 
@@ -95,9 +99,16 @@ const config: Config = {
             "large-desktop": "1530px",
             // => @media (min-width: 1530px) { ... }
          },
+
+         containers: {
+            tablet: "700px",
+            laptop: "900px",
+            desktop: "1280px",
+            "large-desktop": "1530px",
+         },
       },
    },
-   plugins: [],
+   plugins: [containerPlugin],
    corePlugins: {
       preflight: false,
    },

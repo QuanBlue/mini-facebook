@@ -6,7 +6,7 @@ function Friend() {
    return (
       <div className="flex flex-row-reverse">
          {/* nav side */}
-         <div className="fixed left-0">
+         <div className="fixed left-0 z-50">
             <NavBar />
          </div>
 

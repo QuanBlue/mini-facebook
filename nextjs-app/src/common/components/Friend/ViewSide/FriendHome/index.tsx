@@ -68,7 +68,13 @@ let friend_request = [
 
 function FriendHome() {
    let friend_request_elements = friend_request.map((friend) => {
-      return <FriendRequestBadge name={friend.name} avatar={friend.avatar} />;
+      return (
+         <FriendRequestBadge
+            key={friend.uid}
+            name={friend.name}
+            avatar={friend.avatar}
+         />
+      );
    });
 
    return (

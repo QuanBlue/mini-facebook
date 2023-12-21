@@ -32,10 +32,6 @@ function DropDownProvider({ children }: React.PropsWithChildren<{}>) {
       setIsAutoClose,
    };
 
-   useEffect(() => {
-      console.log("isOpen", isOpen);
-   }, [isOpen]);
-
    return (
       <DropDownContext.Provider value={contextValue}>
          {children}

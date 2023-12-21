@@ -10,9 +10,12 @@ function FriendBtn({ avatar, name }: FriendBtnProps) {
    const friendContext = useFriend();
 
    return (
-      <button className="me-2 flex w-full items-center gap-3 rounded-lg hover:bg-secondary">
+      <div
+         className=" flex w-full items-center gap-3 rounded-lg p-2 hover:cursor-pointer hover:bg-secondary    "
+         onClick={() => friendContext.setViewFriend("12345")}
+      >
          <img src={avatar} height={48} width={48} className="rounded-full" />
-         <div className="grid w-full gap-3 text-start">
+         <div className="grid w-full gap-3 px-3 text-start">
             <strong>{name}</strong>
 
             {friendContext.query == "request" && (
@@ -26,7 +29,7 @@ function FriendBtn({ avatar, name }: FriendBtnProps) {
                </div>
             )}
          </div>
-      </button>
+      </div>
    );
 }
 

@@ -58,6 +58,7 @@ function Header() {
       return router.pathname === item.link ? (
          // active button
          <Link
+            key={index}
             href={item.link}
             className="-mb-[3px] flex h-full w-[80px] items-center justify-center border-0 border-b-[3px] border-solid border-primary-icon hover:bg-transparent"
          >
@@ -65,7 +66,7 @@ function Header() {
          </Link>
       ) : (
          // inactive button
-         <div className="flex h-full items-center justify-center">
+         <div className="flex h-full items-center justify-center" key={index}>
             <Link
                href={item.link}
                className="h-5/6 w-[80px] rounded-lg hover:bg-secondary"
