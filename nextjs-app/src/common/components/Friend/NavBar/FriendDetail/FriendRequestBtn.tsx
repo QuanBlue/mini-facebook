@@ -1,12 +1,12 @@
 import { useFriend } from "@components/Friend/context";
 import React from "react";
 
-interface FriendBtnProps {
+interface FriendRequestBtnProps {
    avatar: string;
    name: string;
 }
 
-function FriendBtn({ avatar, name }: FriendBtnProps) {
+function FriendRequestBtn({ avatar, name }: FriendRequestBtnProps) {
    const friendContext = useFriend();
 
    return (
@@ -33,4 +33,4 @@ function FriendBtn({ avatar, name }: FriendBtnProps) {
    );
 }
 
-export default FriendBtn;
+export default FriendRequestBtn;

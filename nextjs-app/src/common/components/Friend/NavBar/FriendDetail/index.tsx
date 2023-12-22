@@ -2,7 +2,7 @@ import React from "react";
 import { useChat } from "@components/Chat/context";
 import { useFriend } from "@components/Friend/context";
 import { LeftArrowIcon } from "@public/svg-icon";
-import FriendRequestBtn from "./FriendBtn";
+import FriendRequestBtn from "./FriendRequestBtn";
 import SearchBar from "@components/SearchBar";
 
 function FriendDetail() {

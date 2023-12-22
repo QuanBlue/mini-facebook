@@ -1,7 +1,7 @@
 import React from "react";
 import FriendRequestBadge from "./FriendRequestBadge";
 
-let friend_request = [
+export let friend_request = [
    {
       uid: 1,
       name: "Nguyễn Văn Asdsssssssssssssssssssssssssssssssss",

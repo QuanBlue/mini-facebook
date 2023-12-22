@@ -43,7 +43,7 @@ const config: Config = {
             "chat-side": "248px",
             "dropdown-menu": "350px",
             "chat-box": "330px",
-            "friend-page-nav-bar": "360px",
+            "friend-page-nav-bar": "300px",
             "personal-page-left-side": "360px",
             "personal-page-right-side": "500px",
          },

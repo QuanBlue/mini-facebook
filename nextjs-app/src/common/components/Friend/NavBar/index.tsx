@@ -10,7 +10,6 @@ function NavBar() {
    return (
       <div className="h-[calc(100vh-56px)]  w-friend-page-nav-bar overflow-hidden bg-white shadow-md">
          {friendContext.query === "home" ? <Default /> : <FriendDetail />}
-         {/* <FriendDetail /> */}
       </div>
    );
 }

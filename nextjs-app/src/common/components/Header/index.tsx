@@ -17,7 +17,7 @@ import Link from "next/link";
 import DropDown from "@components/Button/DropDown";
 import MessengerBody from "./Messenger";
 import Creation from "./Creation";
-import Setting from "./Setting";
+import Setting from "./Account";
 import { useRouter } from "next/router";
 
 const nav_button = [
@@ -60,7 +60,7 @@ function Header() {
          <Link
             key={index}
             href={item.link}
-            className="-mb-[3px] flex h-full w-[80px] items-center justify-center border-0 border-b-[3px] border-solid border-primary-icon hover:bg-transparent"
+            className="flex h-full w-[80px] items-center justify-center hover:bg-transparent tablet:-mb-[3px] tablet:border-0 tablet:border-b-[3px] tablet:border-solid tablet:border-primary-icon"
          >
             <Tooltip describe={item.name}>{item.active_icon}</Tooltip>
          </Link>
@@ -169,8 +169,8 @@ function Header() {
             {/* end tablet responsive */}
 
             {/* > mobile responsive */}
-            <div className="grid grid-cols-3 pb-4 pt-2 tablet:hidden">
-               <Tooltip describe="Trang chủ">
+            {/* <div className="grid grid-cols-3 pb-4 pt-2 tablet:hidden"> */}
+            {/* <Tooltip describe="Trang chủ">
                   <button className="bg-transparent">
                      <HomepageIcon fill="var(--active-icon-color)" />
                   </button>
@@ -180,14 +180,18 @@ function Header() {
                   <button className="bg-transparent">
                      <FriendSolidIcon />
                   </button>
-               </Tooltip>
+               </Tooltip> */}
+            {/* {nav_button_elements} */}
 
-               {/* Messenger */}
-               <Tooltip describe="Messenger">
+            {/* Messenger */}
+            {/* <Tooltip describe="Messenger">
                   <button className="bg-transparent">
                      <MessengerIcon />
                   </button>
-               </Tooltip>
+               </Tooltip> */}
+            {/* </div> */}
+            <div className="flex w-full items-end justify-center gap-2 py-3 tablet:hidden">
+               {nav_button_elements}
             </div>
             {/* end mobile responsive */}
          </div>

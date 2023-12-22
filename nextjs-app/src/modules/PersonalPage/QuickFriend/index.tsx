@@ -7,7 +7,8 @@ function QuickFriend() {
       <div className="grid gap-1">
          <Image
             src={avt}
-            className="h-[100px] w-full rounded-lg object-cover"
+            className="rounded-lg"
+            layout="responsive"
             alt="Picture of the author"
          />
          <strong>

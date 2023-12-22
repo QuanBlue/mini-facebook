@@ -2,6 +2,8 @@ import React from "react";
 import avatar from "@public/avt.jpg";
 import Image from "next/image";
 import { AboutUsIcon, LogOutIcon, RightArrowIcon } from "@public/svg-icon";
+import Link from "next/link";
+import { useDropDown } from "@components/Button/DropDown/context";
 
 const functional_btn = [
    {
@@ -22,11 +24,17 @@ const func_btn_element = functional_btn.map((btn, index) => {
    );
 });
 
-function Setting() {
+function Account() {
+   const dropDownContext = useDropDown();
+
    return (
       <div className="grid gap-3">
          <div className="m-2 grid gap-1 rounded-lg p-1 shadow-around">
-            <button className=" flex w-full  items-center gap-2 rounded-lg p-4 hover:bg-gray">
+            <Link
+               href="/QuanBluee/"
+               className=" flex items-center gap-2 rounded-lg p-4 no-underline hover:bg-gray"
+               onClick={() => dropDownContext.setIsOpen(false)}
+            >
                <Image
                   src={avatar}
                   height={36}
@@ -35,7 +43,7 @@ function Setting() {
                   className="rounded-full"
                />
                <strong className="text-regular">Thanh Quan</strong>
-            </button>
+            </Link>
 
             <div className="grid gap-3 px-3 pb-3">
                {/* hr line */}
@@ -54,4 +62,4 @@ function Setting() {
    );
 }
 
-export default Setting;
+export default Account;

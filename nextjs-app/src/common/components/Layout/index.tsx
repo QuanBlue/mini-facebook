@@ -13,7 +13,7 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
          <CreatePostProvider>
             <div>
                {showHeader && <Header />}
-               <div className="relative top-[117px] w-full tablet:top-[56px]">
+               <div className="relative top-[80px] w-full tablet:top-[56px]">
                   {children}
 
                   {/* Chat box */}
