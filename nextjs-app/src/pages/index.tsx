@@ -1,9 +1,7 @@
-import HomePage from "@modules/HomePage";
+import NewsFeed from "@features/NewsFeed/NewsFeed";
 
-const IndexPage = () => (
-   <div>
-      <HomePage />
-   </div>
-);
+function IndexPage() {
+   return <NewsFeed />;
+}
 
 export default IndexPage;

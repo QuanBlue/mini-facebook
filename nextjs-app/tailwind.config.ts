@@ -5,8 +5,8 @@ import containerPlugin from "@tailwindcss/container-queries";
 
 const config: Config = {
    content: [
-      "./src/common/**/*.{js,ts,jsx,tsx,mdx,css}",
-      "./src/modules/**/*.{js,ts,jsx,tsx,mdx}",
+      "./src/shared/**/*.{js,ts,jsx,tsx,mdx,css}",
+      "./src/features/**/*.{js,ts,jsx,tsx,mdx}",
       "./src/**/*.{js,ts,jsx,tsx,mdx}",
    ],
 
@@ -101,7 +101,7 @@ const config: Config = {
          },
 
          containers: {
-            tablet: "700px",
+            tablet: "450px",
             laptop: "900px",
             desktop: "1280px",
             "large-desktop": "1530px",

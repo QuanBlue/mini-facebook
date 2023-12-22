@@ -4,9 +4,10 @@
       "baseUrl": ".",
       "paths": {
          // Path: set path alias - declare how TypeScript should resolve an import in your require/imports.
-         "@components/*": ["src/common/components/*"],
-         "@styles/*": ["src/common/styles/*"],
-         "@modules/*": ["src/modules/*"],
+         "@components/*": ["src/shared/components/*"],
+         "@contexts/*": ["src/shared/contexts/*"],
+         "@styles/*": ["src/styles/*"],
+         "@features/*": ["src/features/*"],
          "@public/*": ["public/*"]
       },
       "lib": ["dom", "dom.iterable", "esnext"],

@@ -1,7 +1,6 @@
 import "@styles/globals.css";
 import Head from "next/head";
 import type { AppProps } from "next/app";
-import { Roboto } from "next/font/google";
 import Layout from "@components/Layout";
 import { useRouter } from "next/router";
 
